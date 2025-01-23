@@ -1,0 +1,1457 @@
+/* https://www.w3schools.com/css/default.asp */
+body {
+    color: #ffffff;/* Sets the text color to white */
+    font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6; /* Sets the line height to 1.6 times the font size for better readability */
+    margin: 15px;
+    padding: 10px;
+    background-color: #0D0D0D;/* Sets the background color to a dark (#0D0D0D) */
+    overflow-x: hidden; /* Prevents horizontal scrolling by hiding any content overflowing on the x-axis */
+    width: 100%;
+
+}
+h1{
+    color: #FF5722;/* Sets the heading color to a vibrant orange  */
+    text-align: center; /* Centers the text alignment for the h1 element */ 
+}
+
+h2{
+    color: #4682B4 ;/* Sets the color of secondery coler a soft blue  */
+   
+}
+
+/* navigation  */
+
+header{
+    transition: background-color .5s;/* Smoothly transitions the header's background color over 0.5 seconds */
+    position: fixed; /* Keeps the header fixed at the top of the page */
+    width: 100%;
+    z-index: 1000;/* Ensures the header stays above other elements on the page */
+
+}
+.navigation-sidenav {
+    height: 95%;
+    width: 0;
+    position: fixed;/* Keeps the sidebar fixed to the left side of the viewport */
+    z-index: 1;/* Places the sidebar above most content but below the header */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Sets a dark background color for the sidebar */
+    overflow-x: hidden;/* Hides horizontal overflow content within the sidebar */
+    transition: 0.5s;/* Adds a smooth transition when the sidebar's width changes */
+    padding-top: 60px;
+}
+  
+.navigation-sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;/* Removes underline styling from links */
+    color: #FFFFFF;
+    display: block;/* Ensures each link is displayed as a block for better spacing */
+    transition: 0.3s;
+    font-size: 30px;
+}
+  
+.navigation-sidenav a:focus {
+    color: #f1f1f1; /*change the back ground coler when clicking the navigation menu */
+
+}
+  
+.navigation-sidenav .closebtn {
+    position: absolute; /* Positions the close button relative to the sidebar */
+    top: 0;
+    right: 25px;
+    margin-left: 50px;
+}
+.logo-text{
+    text-decoration: none;
+    color: #ffffff; /* logo font color */
+    font-weight: bold;
+    position: absolute; /* Place it independently */
+    top: 6px; /* Adjust vertical positioning */
+    left: 60px; /* Adjust horizontal positioning */ 
+    font-size: 50px; /* Adjust size */
+    z-index: 1100; /* Ensure it appears above other elements */
+    transition: margin-left 0.5s ease; /* Smooth movement */
+}
+#navigation-icon {
+    transition: margin-left .5s;
+    padding: 16px;
+    background-color: #2c2c2c;  /* navigation bar background color */
+    width: 100%;
+    margin-bottom: 10px;
+    padding-right: 16px;
+    border-radius: 20px;
+    color: #ffffff;  /* hammberger mark color */
+    
+}
+/* end of the navigation */
+
+
+/* footer */
+.footer-container{
+    width: 85%;
+    position: relative;/* Relative positioning for all elements inside the tag */
+    padding: 2%;
+    justify-content: center;/* Center the content horizontally */
+    margin: 3%;
+}
+
+/* Styles for the contact us heading */
+#contact_us { 
+    color: #0056b3;
+    text-align: center;/* Center-align the text */
+    font-size:40px;    
+}
+
+/* Styling for text inside divs within the footer container */
+.footer-container div p{
+    color: #ffffff;
+}
+/* contact from */
+input[type=text], select, textarea {
+    width: 100%;/* Make input fields span full width */
+    padding: 12px;
+    border: 1px solid #ff5722;/* Set border color to match theme */
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;/* Allow vertical resizing of textarea */
+    background-color: #000000;
+    font-size: 30px;
+    color: #333333;   
+}
+
+/* Styles for email input fields */
+input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ff5722;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;/* Allow resizing */
+    background-color: #000000;
+    font-size:30px;
+}
+/* Focus styles */
+input[type=text]:focus {
+    background-color: #4682b4;/* Change background color on focus */
+    color: #ffffff;/* Change text color on focus */
+} 
+/* Focus styles */
+input[type=email]:focus {
+    background-color: #4682b4;
+    color: #ffffff;
+} 
+/* Focus styles */
+textarea:focus {
+    background-color: #4682b4;
+    color: #ffffff;
+}
+/* Styles for the submit button */   
+input[type=submit] {
+    background-color: #ff5722;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    height: 65px;
+    font-size: 100%;
+    text-align: center;/* Center-align the button text */
+}
+
+input[type=submit]:hover {
+    background-color: #4682b4; /* Change background color on hover */
+}
+/* end of the contact from */
+#footer-logo{
+    justify-content: center;
+    padding: 20px;
+    width: 75%;
+    height: 75%;
+    position: relative;/* Relative positioning for adjustments */
+}
+
+
+/* social media icons flexboxe */
+/* Styles for social media icons */
+.icon-img{
+    width: 50px;
+    height: 50px;
+    
+}
+.footer-icon{
+    display: flex;/* Use flexbox for alignment */
+    justify-content: left;/* Align icons to the left */
+    gap: 13px;
+    margin: 5%;
+    
+}
+/* Styles for the footer text on the copy right side */
+#footer-right{
+    text-align: center;
+    color: #999999;
+}
+/* end of the footer */
+
+/* Start of home page */
+/* main imge of the ome page */
+section{
+    margin-top: 5%;
+}
+.home-main-container{
+    margin-top: 100px;
+    width: 100%;
+    overflow: hidden; /* Prevents overflow of content */
+    text-align: left;
+    border-radius: 20px;
+    
+    
+}
+/* Video styles */
+video{
+    object-fit: cover;  /* Ensures the video covers its container */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);/* Adds shadow for video*/
+    
+}
+.game-main-text{
+    
+    top: 3%;
+    text-align: left;
+    font-weight: bold;
+    bottom: 2%;
+}
+
+
+/* main imge of the home page */
+/* interoduction  */
+.home-int-container{
+    position: relative;
+    margin-top: 2%;
+    display: grid;/* Sets layout to grid */
+    grid-template-columns: auto auto;/* Two-column layout */
+    gap: 2%;
+    width: 100%;
+
+}
+.home-int-container div{
+    border: 1px solid #FF5722;
+    padding: 10px;
+    border-radius: 20px;  /* Rounds the corners */
+
+}
+
+.home-grid-text-h1{
+    padding-left: 2%;
+    color: #FF5722;
+}
+.home-grid-text {
+    color: #4682b4;
+    
+}
+.home-bullets{
+    padding-left: 4%;
+}
+
+/* 3 sectiones iin the home page */
+/* section 1 */
+.home-section-heder{
+    color: #FF5722;
+    text-align: left;/* Aligns text to the left */
+    position: relative;/* Positions element relative to its normal position */
+
+}
+/* section hedders styles */
+.home-section-heder-p{
+    color: #4a90e2;
+    position: relative;
+}
+/* News container styles */
+.home-news-container{
+    display: flex;/* Sets layout to flexbox */
+    width: 100%;
+    gap: 2%; /* Adds space between items */
+    justify-content: center;/* Centers the content */
+}
+.home-news-container div{
+    width: 100%;  
+    justify-items: center;/* Centers items */
+}
+/* News images styles */
+.home-news-container div img{
+    width: 100%;
+    height: 300px;/* Sets fixed height */
+    border-radius: 10px;
+}
+/* News titles styles */
+.home-news-container div h3{
+    text-align: center;   
+}
+/* end section 1 */
+
+
+/* Section 2 and 3 containers */
+.home-guides-container, .home-community-container{
+    display: grid;/* Sets layout to grid */
+    margin: 3%;
+    gap: 4%;/* Adds space between grid items */
+}
+.home-guides-container div img, .home-community-container div img{
+    border: 5px solid #d3d3d3;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);/* Adds shadow for depth */
+    height: 700px;/* Sets fixed height */
+    position: relative;
+}
+/* end section 2 */
+/* Recommendation banner */
+.home-banner {
+    background-color: #4683b4;
+    color: #fff;
+    text-align: center;
+    margin: 3%;
+    padding: 10px;
+}
+
+
+.recommendation-container {
+    display: flex;/* Sets layout to flexbox */
+    width: 100%;
+    justify-content: center;/* Centers the content */
+    gap: 3%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;/* Wraps items to the next line if necessary */
+}
+
+.recommendation-container {
+    width: 100%;/* Full width of container */
+}
+
+.banner-image{
+    border: 2px solid #fff;
+    width: 100%; /* Full width of parent container */
+}
+
+/* Recommendation game text styles */
+.recommendation-game p {
+    margin-top: 10px; /* Adds space above the text */
+    font-size: 16px;
+    color: #ffffff;
+} 
+
+/* Recommendation buttons */
+.home-recommendation-buttons {
+    display: flex;  /* Sets layout to flexbox */ 
+    gap: 2%;/* Adds space between buttons */
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+/* Individual recommendation buttons */
+.home-recommendation-buttons-buttons {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF5722;
+    border: none;
+    border-radius: 50px; /* Rounds the corners */
+    color: #ffffff;
+    cursor: pointer;/* Changes cursor to pointer on hover */
+    
+}
+
+/* Hover effect for recommendation buttons */
+.home-recommendation-buttons-buttons :hover {
+    background-color: #21a1f1;
+} 
+#all{
+    text-decoration: none;/* Removes underline styling from links */
+}
+/*end  recommendation banner */
+/* end of home page */
+
+
+
+/* strart of the game page */
+/* main image */
+/* General reset for box-sizing */
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+  
+img {
+    vertical-align: middle;/* Vertically aligns images to the middle of their line box */
+}
+  
+/* Position the image container (needed to position the left and right arrows) */
+.game-main-container {
+    position: relative;
+}
+  
+/* Hide the images by default */
+.game-main-mySlides {
+    display: none;/* Ensures only the current slide is visible */
+}
+.game-main-mySlides img{
+    height: 200px;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer; /* Changes cursor style to a pointer */
+}
+  
+/* Next & previous buttons */
+.game-main-prev,
+.game-main-next {
+    cursor: pointer;/* Pointer cursor for buttons */
+    position: absolute;/* Positions buttons over the image container */
+    top: 40%;/* Vertically aligns buttons */
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;/* Centers buttons vertically */
+    color: white;
+    font-weight: bold;/* Boldens text */
+    font-size: 20px;
+    border-radius: 0 3px 3px 0; /* Rounds corners */
+    user-select: none;
+    -webkit-user-select: none;/* Prevents text selection in WebKit browsers */
+}
+  
+/* Position the "next button" to the right */
+.game-main-next {
+    right: 0;/* Aligns to the right edge */
+    border-radius: 3px 0 0 3px;
+}
+.game-main-prev{
+    left: 0;/* Aligns to the left edge */
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.game-main-prev:hover,
+.game-main-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+/* Number text (1/3 etc) */
+.game-main-numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;/* Positions text absolutely */
+    top: 0; /* Aligns to the top */
+}
+  
+/* Container for image text */
+.game-main-caption-container {
+    text-align: center;
+    background-color: rgba(13, 13, 13, 0.5);
+    padding: 2px 16px;
+    color:#ffffff;
+    
+}
+  
+.game-main-row:after {
+    position: relative; /* Relative positioning for layout */
+    display: table;/* Creates a block formatting context */
+    clear: both;/* Clears floating elements */
+}
+  
+/* Six columns side by side */
+.game-main-column {  
+    float: left;/* Aligns columns side-by-side */
+    width: 16.65%; /* Sets each column to take up 1/6 of the row */
+    height: 60px;
+}
+.game-main-column img{
+    height: 75px;
+} 
+/* Add a transparency effect for thumnbail images */
+.game-main-demo {
+    opacity: 0.6;
+}
+  
+.game-main-active,
+.game-main-demo:hover {
+    opacity: 1;
+}
+/* main image */
+
+/* content of  the games page  */
+/* flexbox to  represent the games which has at the store */
+.game-container{
+    margin-top: 5%;
+    position: relative;
+    padding-top: 50px;
+    display: flex;
+    gap: 2%;
+    margin: 2%;
+    flex-wrap: wrap;/* Allows items to wrap to the next line */
+    width: 95%;/* Sets container width */
+    justify-content: center;
+    text-align: center;
+  
+
+}
+/* gmae section */
+.game {
+    position: relative;
+    background-color: #4682b4;
+    border-radius: 30px;
+    border: 1px solid #4a90e2;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.game img{
+    margin-top: 8px;
+    width: 350px;
+    height: 400px;
+}
+.game-container div {
+  justify-content: center;
+  
+}
+.game-container-text h2 {
+  color: #FF5722;
+  text-align: center;
+}
+
+.game-container-text h3{
+  color: #ffffff;
+  text-align: center;
+}
+.game-container-text h4{
+    color: #4682b4;
+    text-align: center;
+}
+/* end of the games page */
+
+/* Starting console and peripherals pages */
+.console-peri-containter-img{
+    height: 400px;/* Sets a fixed height for the images */
+}
+
+/* Main container for console and peripherals */
+.console-peri-containter{
+    margin: 2%;
+    padding: 30px;
+    display: grid;/* Uses a grid layout for content */
+    grid-template-columns: repeat(2, 50%);/* Creates two equal-width columns */
+    gap: 2%;/* Adds spacing between grid items */
+    width: 95%;
+    justify-content: center;
+    
+}
+
+.console-peri-containter > div h2{
+    text-align: center;
+    color: #FF5722;
+}
+.console-peri-containter > div h3{
+    text-align: center;
+    color: #4682B4;
+}
+.console-peri-containter > div p{
+    color: #FFFFFF;
+}
+
+/*end of console and peripherals pages */
+
+
+/* up coming video games  page */
+
+/* main */
+/* Slideshow container */
+
+
+.up-main-mySlides {display: none;}/* Hide all the images by default */
+.up-main-slideshow-container {
+    max-width: 1000px;/* Limits the maximum width of the slideshow */
+    position: relative;
+    margin: auto;
+}
+  
+/* Caption text */
+.up-main-text {
+    color: #ffffff;
+   
+    padding: 8px 12px;
+    position: absolute;/* Positions text relative to the container */
+    bottom: 8px; /* Places the text 8px from the bottom of the container */
+    width: 100%;
+    text-align: center;
+}
+  
+/* Number text (e.g., 1/3) */
+.up-main-numbertext {
+    color: #f2f2f2; 
+    padding: 8px 12px;
+    position: absolute; /* Positions the text */
+    top: 0;/* Places the text at the top of the container */
+}
+  
+/* The dots/bullets/indicators */
+.up-main-dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;/* Sets a gray background color */
+    border-radius: 50%;/* Makes the dots circular */
+    display: inline-block;/* Ensures dots are inline elements */
+    transition: background-color 0.6s ease; /* Smooth transition for hover effect */
+}
+  
+.up-main-active {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.up-main-fade {
+    animation-name: fade; /* Applies fade animation */
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} /* Starting opacity */
+    to {opacity: 1} /* Final opacity */
+}
+  
+/*end main */
+
+.up-game-section {
+    padding: 30px;
+    display: flex;/* Uses flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center;/* Centers content vertically */
+    padding: 20px;
+    width: 100%;
+    gap: 3%;/* Adds spacing between elements */
+    align-items: flex-start;/* Aligns items to the top */
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+}
+
+/* upcoming game container */
+.up-games {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+/* Image container for games */
+.up-image-container img {
+    width: 100%; /* Ensures images span the full width of the container */
+    height: 100%;
+}
+
+
+.up-image-container .up-details p {
+    margin: 5px 0;/* Adds vertical spacing between paragraphs */
+    font-size: 20px;
+}
+
+
+.up-title {
+    margin: 10px 0 0;
+    font-size: 40px;
+    color: #ff5722;
+}
+
+.up-date{
+    color: #4682b4;
+    
+
+}
+.up-image-container img {
+    width: 100%;
+}
+
+/* end upcoming viideo games  page */
+
+
+/* about us */
+.about-main{
+    background-color: #4682B4;
+    text-align: center;/* Centers the text */
+    margin-top: 90px;
+    font-size: 50px;
+}
+/* Default: Hide the table */
+.about-table {
+    display: none; /* Table is hidden by default */
+}
+
+/* Branches Section */
+.branchers-text{
+    text-align: left;
+}
+.branchers-name{
+    color: #FFFFFF;
+}
+.branchers-hours{
+    color: #FF5722;
+}
+/* Flexbox container for branches and locations */
+.branchers, .location{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+.branchers-img, .location-map{
+    border-radius: 10px;/* Uses flexbox for layout */
+    height: 200px;/* Adds spacing between flex items */
+    object-fit: cover;/* Adds space below the container */
+
+}
+.map, .branchers-img{
+    border: 1px solid #4682B4;
+}
+.location-map{
+    width: 100%;
+    
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_zoom_hover */
+.branchers-img:focus{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); /* Zoom on focus */
+}
+.map-text h3{
+    color: #FF5722;
+}
+/* End of the about us */
+
+/* FAQ Section Styling */
+#faq  button, .accordion{
+    font-size: 125%;
+  
+}
+
+/* Accordion button styles */
+.accordion  {
+    background-color: #4682B4;
+    color: #ffffff;
+    cursor: pointer;/* Change cursor to pointer to indicate interactivity */
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;/* Remove default focus outline */
+    transition: 0.4s;/* Smooth transition for hover effects */
+    border: 1px solid  #FF5722; 
+
+}
+
+/* Styles for the content inside the panel */
+.panel p{
+    color: #FFFFFF;
+    font-size: 125%;
+    
+}
+/* Add Question texteria styles */
+#add-q{
+    margin-top:2% ;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 95%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 150%;
+    justify-content: center;
+    margin-right: 100px; 
+    border: 1px solid #FF5722;
+}
+
+/* Add Question button focus state */
+#add-q:focus {
+    background-color: #4682B4;
+    color: #ffffff;
+} 
+/* Active accordion and hover state styles */ 
+.active, .accordion:hover {
+    background-color: #000000;
+}
+
+/* Add "+" icon to accordion buttons */
+.accordion:after {
+    content: '\002B';/* Unicode for "+" symbol */
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+ /* Change "+" to "-" icon when active */ 
+.active:after {
+    content: "\2212";
+}
+  
+.panel {
+    padding: 0 18px;
+    background-color: #0D0D0D;
+    max-height: 0;
+    overflow: hidden;/* Hide content when collapsed */
+    transition: max-height 0.2s ease-out;
+}
+  
+/* Submit button styles */
+input[type=submit] {
+      background-color:#FF5722;
+      color: #ffffff;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      height: 50%;
+      font-size: 100%;
+      text-align: center;
+}
+input[type=submit]:hover {
+      background-color: #4682B4;
+}
+
+
+@media screen and (min-width: 1000px)
+{
+    body{ margin-top: 0;
+        font-size: 50px;
+        width: 100%;
+    }
+    h1{
+        font-size: 200%;
+    }
+    h2{
+        font-size: 90px;
+    }
+    /* Hide the hamburger icon */
+    #navigation-icon {
+        display: none;
+    }
+
+    /* Show the navigation links as a horizontal bar */
+    #navigation-mySidenav {
+        width: 100%; /* Full width for the nav bar */
+        height: auto; /* Adjust height to fit content */
+        position: static; /* Static position for normal flow */
+        background-color: #2C2C2C; /* Optional: match the header color */
+        padding: 0; /* Remove unnecessary padding */
+        display: flex; /* Flexbox for horizontal layout */
+        flex-direction: row;
+        justify-content: right; /* Center links horizontally */
+        align-items: center; /* Center links vertically */
+        top:0;
+
+    }
+
+    /* Style the navigation links */
+    #navigation-mySidenav a {
+        margin-right: 10px;
+        padding: 10px 20px;
+        font-size: 150%; /* Adjust font size for desktop */
+        color: #ffffff; /* Match the header text color */  
+    }
+
+    
+
+    /* Remove the close button for desktop view */
+    .navigation-sidenav .closebtn {
+        display: none;
+    }
+    #myLinks{
+        display: flex;
+        flex-direction: row; 
+        gap: 20px;    
+        object-fit: cover;
+    }
+    #myLinks  :hover {
+        color: #FF5722;
+        box-shadow: 0px 4px 15px rgba(106, 13, 173, 0.6); /* Glow effect */
+        font-weight: bold; /* Emphasize */
+
+    }
+    .logo-text {
+        
+        font-size: 90px;
+        left: 40px; /* Adjust for mobile screens */
+    }
+    /* navigation bar */
+
+    /* home section   */
+    video{
+        height: 1500px;
+    }
+
+    .game-main-text{
+        margin-left: 7%;
+        position: absolute;
+        top: 3%;
+        text-align: left;
+        font-weight: bold;
+        bottom: 2%;
+    }
+    .game-main-text h1{
+        color: #ffffff;
+        font-size:270%;
+        margin-top: 500px;
+        text-align: left;
+    }
+    .game-main-text p{
+        
+        object-fit: cover;
+        font-size: 100px;
+    }
+    .game-main-text p{
+        color: #ffffff;
+        object-fit: cover;
+    }
+
+    /* giveing a font sizees */
+    .home-grid-text-h1{
+        font-size: 80px;
+    }
+    .home-grid-text {
+       font-size: 70px;
+       padding: 9px; 
+    }
+    .home-section-heder{
+        font-size: 100px;
+    }
+    .home-section-heder-p{
+        font-size: 70px;
+        padding-left: 10px;
+    }
+    .home-news-container div img{
+        width: 100%;
+        height: 1500px;
+    }
+
+    /* image section */
+    .home-guides-container div img, .home-community-container div img{
+        width: 100%;
+        height: 2000px;
+    }
+    .recommendation-container{
+        height: auto;
+        overflow: hidden;
+    }
+    .recommendation-game p {
+        font-size: 60px;
+    }
+    
+    .home-recommendation-buttons-buttons {
+        margin-top: 10px;
+        font-size: 100px;   
+    }
+    #recommendation{
+        width: 850px;
+        height: 150px;
+    }
+    #all{
+        width: 300px;
+        height: 150px;
+    }
+    /* hover over effect */
+    #all :hover {
+        background-color: #4A90e2;
+    } 
+    .banner-image{
+        width: 950px;
+        height: 600px;
+    }
+    .banner-image:hover{
+        transform: scale(1.2);
+        transition: transform 1s ease
+    }
+    .home-guides-container, .home-community-container{
+        display: flex;
+        gap: 2%;
+        width: 95%;
+
+    }
+    .home-guides-container div{
+        width: 100%;
+    }
+    /* end of the home page */
+
+    
+    /* game section   */ 
+    #game{
+        font-size: 60px;
+    }
+    /* main image */
+    .game-main-prev,
+    .game-main-next {
+        top: 40%;
+        width: auto;
+        padding: 16px;
+        color: white;
+        font-size: 100px;
+    }
+    .game-main-mySlides img{
+        height: 1800px;
+    }
+    /* .game-main-mySlides img{
+        height: auto;
+        object-fit: contain; 
+    } */
+    .game-main-numbertext{
+        font-size: 50px;
+    }
+    .game-main-column{
+        height: 100px;
+        margin-bottom: 10%;
+    }
+    .game-main-column img {
+        height: 250px;
+    }
+
+    /* game section */
+    #game-head{
+        margin-top: 5%;
+    }
+
+
+    .game-container {
+        display: flex;
+        justify-content: space-around; /* Distribute items evenly */
+        align-items: center;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        gap: 20px; /* Spacing between items */
+        padding: 20px;
+        width: 100%;
+    } 
+    .game {
+        width: 900px;
+        margin-bottom: 0;
+        transition: all 1s ease; /* Adds a smooth transition to all animatable properties */
+        height: 1500px;
+    }
+    
+    .game img {
+        width: 700px;
+        height: 900px;
+        transition: transform 1s ease; /* Optional: Smooth transformation for the image */
+    }
+    
+    .game:hover {
+        width: 1200px; /* Expands width on hover */
+        height: auto;
+    }
+    
+    .game-container-text h4,
+    .game-container-text p,
+    .game-container-text h3 {
+        opacity: 0; /* Initially hidden using opacity */
+        transform: translateY(10px); /* Slight downward position for animation effect */
+        transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1) ease, transform 1s ease; /* Adds smooth transition to text */
+    }
+    
+    .game:hover .game-container-text h4,
+    .game:hover .game-container-text p,
+    .game:hover .game-container-text h3 {
+        opacity: 1; /* Fully visible on hover */
+        transform: translateY(0); /* Reset position */
+    }
+    
+    /* Ensure other text remains visible without animation */
+    .game-container-text h2 {
+        display: block;
+    }
+    /* Show h5 and p elements when hovering over the image */
+    .game:hover .game-container-text h4,
+    .game:hover .game-container-text p,
+    .game:hover .game-container-text h3 {
+        display: block;
+        width: 1200px; 
+        margin-top: -10%;
+        height: auto;
+    }
+
+    .game:hover {
+        width: 1200px; /* Limit width */
+        height: auto;
+        
+    }
+
+    /* Ensure other text remains visible */
+    .game-container-text h2,
+    .game-container-text h3{
+        display: block;
+    }
+    /* end of the game section */
+    /* starting console and peripherals pages */
+    
+    .con-peri-heder{
+        margin-top: 5%;
+    }
+    .console-peri-containter{
+        padding: 30px;
+        grid-template-columns: repeat(3, 30%);/* Create a grid with 3 columns, each taking up 30% of the width */
+       
+    }
+    .console-peri-containter-img{
+        height: 900px;
+        
+    }
+    /* Container for the image and overlay */
+    .image-conttainer {
+        position: relative;
+        width: 100%;
+    } 
+    /* Hide the overlay by default */
+    .text-of-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        padding-top: 100px;
+        font-size: 100px;
+    }
+  
+    /* Show the overlay when hovering over the image */
+    .image-conttainer:hover .text-of-img {
+        opacity: 1;
+        border-radius: 20px;
+    }
+  
+    /* Style for the text inside the overlay */
+    .text-of-img p,
+    .text-of-img h3 {
+        margin: 10px 0;
+    }
+    /*end of console and peripherals pages */
+
+
+    /* up coming page */
+    /* up comeing  section */
+
+    #up-comig{
+        margin-top: 5%;
+        text-align: center;
+        font-size: 60px;
+    }
+    /* main img */
+    .up-main-slideshow-container {
+        max-width: 100%; 
+        position: relative;
+        margin: auto;
+        justify-content: left;
+    }
+      
+    /* Caption text */
+    .up-main-text {
+        color: #ffffff;
+        font-size:200%;
+        bottom: 8px;
+        width: 100%;
+        
+    }
+      
+    /* Number text (1/3 etc) */
+    .up-main-numbertext {
+        font-size: 60px;
+    }
+      
+    /* The dots/bullets/indicators */
+    .up-main-dot {
+        height: 50px;
+        width: 50px;
+       
+    }      
+    .up-main-mySlides img{
+        height: 1500px;
+    }
+    /* end of main */
+    .up-image-container img {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .up-image-container .up-details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        padding: 20px;
+        box-sizing: border-box;
+        
+        color: #f0f0f0;
+    }
+    
+    .up-image-container .up-details p {
+        margin: 5px 0;
+        font-size: 60px;
+    }
+    
+    .up-image-container:hover img {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    
+    .up-image-container:hover .up-details {
+        opacity: 1;/* Make the details fully visible when the image is hovered */
+    }
+    
+    .up-image-container img {
+        width: 1500px;
+    }
+    .up-image-container {
+        position: relative;
+        width: 100%;
+        height: 900px;
+    }
+    .up-title{
+        font-size: 70px;
+    }
+    /* end of the up coming page */
+
+
+
+    /* about us  */
+    /* about section */
+    #about{
+        margin-top: 4%;
+    }
+    .about-main{
+        height: auto; 
+        font-weight: bolder;
+        font-size: 700%; 
+        color: white;
+    }
+    .about-contener{
+        top:30%;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 100px;
+        padding: 20px;
+        justify-items: center;
+        
+    }
+    .about-header{
+        width: 30%;
+    }
+    #about-desc{
+        margin-top: 2%;
+        height: 1000px;
+        align-items: center;
+        font-size: 110%;
+        border-radius: 40px;
+    }
+     .about-information, .location-information{
+        margin: 5%;
+        justify-self: left;
+        font-size: 60px;
+        width: 90%;
+    } 
+    .branchers{
+        width: 100%;
+    }
+    .branchers div img{
+        width: 600px;
+    }
+    .about-information  h2,  .location-information{
+        text-align: left;
+    }
+    .branchers{
+        gap: 3%;
+        padding-bottom: 5%;
+        width: 100%;
+        justify-self: center;
+        
+        
+    }
+    
+    .branchers-img{
+        border-radius: 10px;
+        height: 1000px;
+        object-fit: cover;
+        
+    
+    }
+    /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_zoom_hover */
+        .branchers-img:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1); 
+        transition: transform 0.8s; /* Smooth flipping effect */
+
+    }
+    .branchers-img, .branchers-text, .map-text, .map{
+        width: 100%;
+        align-content: center;
+        text-align: center;
+    }
+    .about-table{
+        width: 95%;
+        height: 600px;
+        display: table;
+    }
+    table {
+        width: 100%;
+        height: 100%;
+        border-collapse: collapse; /* Collapse table borders for a cleaner look */
+        margin: 20px 0;
+        font-size: 76px;
+        text-align: left;
+        color: #fff;
+    }
+    td, th{
+        border: 1px solid #333333;
+    }
+    
+    
+    table thead th {
+        background-color: #FF5722;
+        padding: 20px;
+        color: #FFFFFF;
+    }
+    
+    table tbody td {
+        padding: 10px;
+        border-bottom: 1px solid #444;
+        color: #ffffff;
+    }
+    
+    table tfoot td {
+        text-align: center;
+        font-style: italic;
+        padding: 10px;
+        color: #ffffff;
+        
+    }
+    
+    table tfoot td[colspan="3"] {
+        border-top: 2px solid #444;
+    }
+    .branchers-text{
+        text-align: left;
+    }
+    .branchers-text-2{
+        text-align: right;
+    }
+    /* location section */
+    .location{
+        flex-direction: column;
+        gap: 2%;
+        width: 100%;
+    }
+    
+    .first{
+        order: 2;/* to shift the position */
+    }
+    .second{
+        
+        order: 1;/* to shift the position */
+    }
+    .location-des{
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        width: 100%;
+        
+        justify-content: center;
+    } 
+    .location-map{
+        width: 100%;
+        height: 1500px;
+    }
+    /* end of about */
+
+
+    /* faq */
+     /* about section */
+     .faq_contener{
+        display: flex;
+        width: 100%;
+        gap: 2%
+    }
+    .faq_contener div {
+        width: 100%;
+        justify-content: center;
+    }
+    /* sift the content of the two plasese */
+    .faq_first{
+        order: 2;
+    }
+    .faq_second{
+        margin-top: 6%;
+        order: 1;
+    }
+    /* end of faq */
+
+
+    /* footer */
+    footer{
+        height: 1000px;
+        position: relative;
+    }
+    #contact_us{
+        text-align: left;
+        font-size: 100px;
+        
+    }
+   
+    .footer-container{
+        margin-top: 5%;
+        display: flex;
+        width: 100%;
+        gap: 5%;
+        height: 1500px;
+    }
+    .footer-container div{
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .footer-container div p{
+        font-size: 80px;
+    }
+    input[type=text], select, textarea {
+        font-size: 70px;
+    }
+
+    input[type=email] {
+        font-size:70px;
+    }
+    
+    
+      
+    input[type=submit] {
+        height: 70px;
+    }
+    /* social media icons flexboxe */
+    .icon-img{
+        width: 300px;
+        height: 300px;
+    
+    }
+    .footer-icon{
+        gap: 13px;
+        margin: 5%;
+    }
+    #footer-logo{
+        height: 1500px;
+    }
+    /* end of the footer */
+}

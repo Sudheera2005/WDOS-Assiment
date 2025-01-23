@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#FF5722">
+    <meta name="msapplication-TileImage" content="./favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#0D0D0D">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <!----------------------------------------------- navigation ------------------------------------------------>
+  <header>
+    <div id="navigation-icon">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+    
+    <a href="./index.html" class="logo-text" > Grotto Gaming</a> 
+    <div id="navigation-mySidenav" class="navigation-sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+      <nav id="myLinks">
+        <a href="./index.html">Home</a>
+        <a href="./games.html">Games</a>
+        <a href="./console.html">Consoles</a>
+        <a href="./peripherals.html">Paripherals</a>
+        <a href="./up.html">Upcoming</a>
+        <a href="./about.html">About Us</a>
+        <a href="./FAQ.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+  <br>
+  
+<!------------------------------------------------ navigation ------------------------------------------------------------->
+  <section  id="faq">
+    <!------------------------------- fsq answeres and question ------------------------------------------------------------>
+
+    <h1 id="fsq-h1">Questions</h1>
+    <div class="faq_contener">
+      <div class="faq_first">
+        <img src="./Image/Q/FAQ.jpg" alt="FAQ" style="width: 100%;">
+      </div>
+      <div class="faq_second">
+        <!-- https://www.freepik.com/free-vector/tiny-business-people-with-giant-faq-letters-gadget-users-searching-instructions-useful-information-flat-vector-illustration-customer-support-solution-concept-banner-landing-web-page_26156488.htm#fromView=search&page=1&position=2&uuid=131c64d3-bf33-4294-abaa-7c4d0ea2f04d -->
+        <h2 id="faq-h2">Frequently Asked Questions</h2>
+        <button class="accordion">Can I pre-order games?</button>
+        <div class="panel">
+          <p>Yes! You can usually pre-order upcoming games and get them on the release date.</p>
+        </div><br>
+        <button class="accordion">What are your return policies?</button>
+        <div class="panel">
+          <p>We have a return policy for most items, but there may be some restrictions. Please see our full return policy on our website.</p>
+        </div><br>
+        <button class="accordion">Do you sell gaming accessories?</button>
+        <div class="panel">
+          <p> Absolutely! We sell things like controllers, headsets, steering wheels, and other cool gear for gaming.</p>
+        </div><br>
+        <button class="accordion">What should I do if I encounter a problem with my purchase?</button>
+        <div class="panel">
+          <p>  First, carefully review the product manual or warranty information. Then, contact the seller or maintainer, depending on the issue.</p>
+        </div><br>
+      </div>
+      
+    </div>
+    <!------------------------------------------------ textarea  ------------------------------------------------>
+    <form>
+      <textarea id="add-q" name="subject" placeholder="Write your message.." style="height:200px"></textarea><br>
+      <input type="submit" value="Submit" >
+    </form>
+
+  </section><br>
+   <!-------------------------------------------- footer ------------------------------------------------------>
+   <footer>
+    <div class="footer-container">
+       
+        <div>
+            <h2 id="contact_us"><b>Contact Us</b></h2>
+            <p>leave us a message:</p>
+            <form >
+                <input type="text" id="fname" name="firstname" placeholder="Your name.."  >
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." >
+                <input type="email" id="emal" name="email" placeholder="Your email.." >
+                <textarea id="subject" name="subject" placeholder="Write your message.." style="height:170px"></textarea><br>
+                <input type="submit" value="Submit" >
+            </form>
+        </div>
+        <div>
+            <img id="footer-logo" src="./Image/Logo.png" alt="logo">
+        </div>
+
+    </div>
+    <div class="footer-icon">
+        <div class="icon"><img class="icon-img" src="./Image/Footer/facebook.png" alt="icon img 1" ></div>
+        <div class="icon"><img class="icon-img" src="./Image/Footer/instagram.png" alt="icon img 2"></div>
+        <div class="icon"><img class="icon-img" src="./Image/Footer/pinterest.png" alt="icon img 3"></div>
+        <div class="icon"><img class="icon-img" src="./Image/Footer/tik-tok.png" alt="icon img 4"></div>
+    </div> 
+    <p id="footer-right">&copy; 2025 Grotto gameing Company. All rights reserved.</p>
+  </footer>
+  <!--------------------------------------------------------- footer --------------------------------------------->
+  <script src="./scripts/game-store.js"></script><!--link the scrip file --> 
+</body>
