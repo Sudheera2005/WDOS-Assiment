@@ -154,7 +154,8 @@ input[type=submit] {
     padding: 12px 20px;
     border: none;
     cursor: pointer;
-    height: 65px;
+    width: 50%;
+    height: auto;
     font-size: 100%;
     text-align: center;/* Center-align the button text */
 }
@@ -213,15 +214,16 @@ video{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);/* Adds shadow for video*/
     
 }
-.game-main-text{
-    
+.game-main-text{ 
     top: 3%;
     text-align: left;
     font-weight: bold;
     bottom: 2%;
 }
 
-
+.game-main-text p{
+    text-align: center;
+}
 /* main imge of the home page */
 /* interoduction  */
 .home-int-container{
@@ -350,7 +352,7 @@ video{
 /* Individual recommendation buttons */
 .home-recommendation-buttons-buttons {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 25px;
     background-color: #FF5722;
     border: none;
     border-radius: 50px; /* Rounds the corners */
@@ -360,7 +362,7 @@ video{
 }
 
 /* Hover effect for recommendation buttons */
-.home-recommendation-buttons-buttons :hover {
+.home-recommendation-buttons-buttons :focus {
     background-color: #21a1f1;
 } 
 #all{
@@ -392,7 +394,7 @@ img {
     display: none;/* Ensures only the current slide is visible */
 }
 .game-main-mySlides img{
-    height: 200px;
+    height: 300px;
 }
 /* Add a pointer when hovering over the thumbnail images */
 .cursor {
@@ -519,8 +521,9 @@ img {
   text-align: center;
 }
 .game-container-text h4{
-    color: #4682b4;
+    color: #ffffff;
     text-align: center;
+    
 }
 /* end of the games page */
 
@@ -563,6 +566,9 @@ img {
 
 
 .up-main-mySlides {display: none;}/* Hide all the images by default */
+.up-main-mySlides img{
+    height: 300px;
+}
 .up-main-slideshow-container {
     max-width: 1000px;/* Limits the maximum width of the slideshow */
     position: relative;
@@ -1084,6 +1090,7 @@ input[type=submit]:hover {
     
     .con-peri-heder{
         margin-top: 5%;
+       
     }
     .console-peri-containter{
         padding: 30px;
