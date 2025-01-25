@@ -28,6 +28,7 @@ header{
     position: fixed; /* Keeps the header fixed at the top of the page */
     width: 100%;
     z-index: 1000;/* Ensures the header stays above other elements on the page */
+    margin: 0;
 
 }
 .navigation-sidenav {
@@ -68,7 +69,7 @@ header{
     color: #ffffff; /* logo font color */
     font-weight: bold;
     position: absolute; /* Place it independently */
-    top: 6px; /* Adjust vertical positioning */
+    top: 10px; /* Adjust vertical positioning */
     left: 60px; /* Adjust horizontal positioning */ 
     font-size: 50px; /* Adjust size */
     z-index: 1100; /* Ensure it appears above other elements */
@@ -100,8 +101,7 @@ header{
 /* Styles for the contact us heading */
 #contact_us { 
     color: #0056b3;
-    text-align: center;/* Center-align the text */
-    font-size:40px;    
+    text-align: center;/* Center-align the text */   
 }
 
 /* Styling for text inside divs within the footer container */
@@ -110,27 +110,27 @@ header{
 }
 /* contact from */
 input[type=text], select, textarea {
-    width: 100%;/* Make input fields span full width */
+    width: 95%;/* Make input fields span full width */
     padding: 12px;
     border: 1px solid #ff5722;/* Set border color to match theme */
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;/* Allow vertical resizing of textarea */
     background-color: #000000;
-    font-size: 30px;
-    color: #333333;   
+    color: #333333; 
+    cursor: pointer;  
 }
 
 /* Styles for email input fields */
 input[type=email] {
-    width: 100%;
+    width: 95%;
     padding: 12px;
     border: 1px solid #ff5722;
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;/* Allow resizing */
     background-color: #000000;
-    font-size:30px;
+    cursor: pointer;
 }
 /* Focus styles */
 input[type=text]:focus {
@@ -197,7 +197,7 @@ input[type=submit]:hover {
 /* Start of home page */
 /* main imge of the ome page */
 section{
-    margin-top: 5%;
+    margin-top: 12%;
 }
 .home-main-container{
     margin-top: 100px;
@@ -471,10 +471,7 @@ img {
     opacity: 0.6;
 }
   
-.game-main-active,
-.game-main-demo:hover {
-    opacity: 1;
-}
+
 /* main image */
 
 /* content of  the games page  */
@@ -496,8 +493,6 @@ img {
 /* gmae section */
 .game {
     position: relative;
-    background-color: #4682b4;
-    border-radius: 30px;
     border: 1px solid #4a90e2;
     width: 100%;
     margin-bottom: 10px;
@@ -688,6 +683,9 @@ img {
 }
 
 /* Branches Section */
+.about-contener div{
+    width: 100%;
+}
 .branchers-text{
     text-align: left;
 }
@@ -755,7 +753,7 @@ img {
     
 }
 /* Add Question texteria styles */
-#add-q{
+.add-q{
     margin-top:2% ;
     background-color: #000000;
     color: #ffffff;
@@ -772,7 +770,7 @@ img {
 }
 
 /* Add Question button focus state */
-#add-q:focus {
+.add-q:focus {
     background-color: #4682B4;
     color: #ffffff;
 } 
@@ -818,24 +816,18 @@ input[type=submit]:hover {
 }
 
 
-@media screen and (min-width: 1000px)
-{
+@media screen and (min-width: 1000px){
     body{ margin-top: 0;
-        font-size: 50px;
+        font-size: 13px;
         width: 100%;
     }
-    h1{
-        font-size: 200%;
-    }
-    h2{
-        font-size: 90px;
-    }
+
     /* Hide the hamburger icon */
     #navigation-icon {
         display: none;
     }
 
-    /* Show the navigation links as a horizontal bar */
+    /* Horizontal navigation bar styling */
     #navigation-mySidenav {
         width: 100%; /* Full width for the nav bar */
         height: auto; /* Adjust height to fit content */
@@ -844,54 +836,92 @@ input[type=submit]:hover {
         padding: 0; /* Remove unnecessary padding */
         display: flex; /* Flexbox for horizontal layout */
         flex-direction: row;
-        justify-content: right; /* Center links horizontally */
+        justify-content: flex-end; /* Align links to the right */
         align-items: center; /* Center links vertically */
-        top:0;
-
+        top: 0;
     }
-
+    
     /* Style the navigation links */
     #navigation-mySidenav a {
-        margin-right: 10px;
         padding: 10px 20px;
-        font-size: 150%; /* Adjust font size for desktop */
-        color: #ffffff; /* Match the header text color */  
+        font-size: 20px; /* Adjust font size for desktop */
+        color: #ffffff; /* Match the header text color */
+        text-decoration: none; /* Remove underline from links */
+        transition: color 0.3s ease; /* Smooth hover effect */
     }
 
-    
+    /* Hover effect for links */
+    #navigation-mySidenav a:hover , .logo-text:hover {
+        color: #ff5722; /* Change to a vibrant color on hover */
+    }
+
+    /* Link container for better spacing */
+    #myLinks {
+        display: flex;
+        flex-direction: row; 
+        gap: 2px; /* Space between links */
+    }
 
     /* Remove the close button for desktop view */
     .navigation-sidenav .closebtn {
         display: none;
     }
-    #myLinks{
-        display: flex;
-        flex-direction: row; 
-        gap: 20px;    
-        object-fit: cover;
-    }
-    #myLinks  :hover {
-        color: #FF5722;
-        box-shadow: 0px 4px 15px rgba(106, 13, 173, 0.6); /* Glow effect */
-        font-weight: bold; /* Emphasize */
 
-    }
+    
     .logo-text {
-        
-        font-size: 90px;
+    
+        top:7px;
+        text-align: left;
+        font-size: 20px;
         left: 40px; /* Adjust for mobile screens */
     }
     /* navigation bar */
-
-    /* home section   */
-    video{
-        height: 1500px;
+    /* footer */
+    footer{
+        height: 500px;
+        position: relative;
+    }
+    #contact_us{
+        text-align: left;
+        
+    }
+   
+    .footer-container{
+        margin-top: 5%;
+        display: flex;
+        width: 100%;
+        gap: 5%;
+    }
+    .footer-container div{
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+ 
+    /* social media icons flexboxe */
+    .icon-img{
+        width: 40px;
+        height: 40px;
+    
+    }
+    .footer-icon{
+        gap: 13px;
+        margin: 5%;
+    }
+    #footer-logo{
+        justify-items: center;
+        height: 500px;
+    }
+    /* end of the footer */
+     /* home section   */
+     video{
+        height: 400px;
     }
 
     .game-main-text{
         margin-left: 7%;
         position: absolute;
-        top: 3%;
+        top: 40%;
         text-align: left;
         font-weight: bold;
         bottom: 2%;
@@ -899,71 +929,32 @@ input[type=submit]:hover {
     .game-main-text h1{
         color: #ffffff;
         font-size:270%;
-        margin-top: 500px;
+        margin-top: 50px;
         text-align: left;
     }
-    .game-main-text p{
-        
-        object-fit: cover;
-        font-size: 100px;
-    }
-    .game-main-text p{
-        color: #ffffff;
-        object-fit: cover;
-    }
-
-    /* giveing a font sizees */
-    .home-grid-text-h1{
-        font-size: 80px;
-    }
-    .home-grid-text {
-       font-size: 70px;
-       padding: 9px; 
-    }
-    .home-section-heder{
-        font-size: 100px;
-    }
-    .home-section-heder-p{
-        font-size: 70px;
-        padding-left: 10px;
-    }
-    .home-news-container div img{
+     /* 3 section */
+     .home-guides-container div img, .home-community-container div img{
         width: 100%;
-        height: 1500px;
-    }
-
-    /* image section */
-    .home-guides-container div img, .home-community-container div img{
-        width: 100%;
-        height: 2000px;
-    }
-    .recommendation-container{
-        height: auto;
-        overflow: hidden;
-    }
-    .recommendation-game p {
-        font-size: 60px;
+        height: 500px;
     }
     
     .home-recommendation-buttons-buttons {
         margin-top: 10px;
-        font-size: 100px;   
+      
     }
     #recommendation{
-        width: 850px;
-        height: 150px;
+        height: auto;
     }
     #all{
-        width: 300px;
-        height: 150px;
+        width: 9%;
     }
     /* hover over effect */
-    #all :hover {
+    #all:hover {
         background-color: #4A90e2;
     } 
     .banner-image{
-        width: 950px;
-        height: 600px;
+        width: 150px;
+        height: 100px; 
     }
     .banner-image:hover{
         transform: scale(1.2);
@@ -980,44 +971,24 @@ input[type=submit]:hover {
     }
     /* end of the home page */
 
-    
-    /* game section   */ 
-    #game{
-        font-size: 60px;
+    /* game section   */
+    #game-head{
+        margin-top: 10%;
     }
-    /* main image */
+     /* main image */
     .game-main-prev,
     .game-main-next {
-        top: 40%;
-        width: auto;
-        padding: 16px;
-        color: white;
-        font-size: 100px;
+         top: 40%;
+         width: auto;
+         padding: 16px;
+         color: white;
+         font-size: 50px;
     }
     .game-main-mySlides img{
-        height: 1800px;
+        height: 400px;
     }
-    /* .game-main-mySlides img{
-        height: auto;
-        object-fit: contain; 
-    } */
-    .game-main-numbertext{
-        font-size: 50px;
-    }
-    .game-main-column{
-        height: 100px;
-        margin-bottom: 10%;
-    }
-    .game-main-column img {
-        height: 250px;
-    }
-
+    /* main image */
     /* game section */
-    #game-head{
-        margin-top: 5%;
-    }
-
-
     .game-container {
         display: flex;
         justify-content: space-around; /* Distribute items evenly */
@@ -1026,31 +997,28 @@ input[type=submit]:hover {
         gap: 20px; /* Spacing between items */
         padding: 20px;
         width: 100%;
-    } 
+    }
+    
     .game {
-        width: 900px;
+        width: 200px;
+        height: 350px;
         margin-bottom: 0;
-        transition: all 1s ease; /* Adds a smooth transition to all animatable properties */
-        height: 1500px;
+        overflow: hidden; /* Prevent content from overflowing */
+        transition: transform 0.5s ease, all 0.5s ease; /* Smoother transition */
     }
     
     .game img {
-        width: 700px;
-        height: 900px;
-        transition: transform 1s ease; /* Optional: Smooth transformation for the image */
-    }
-    
-    .game:hover {
-        width: 1200px; /* Expands width on hover */
-        height: auto;
+        width: 100px;
+        height: 200px; /* Maintain aspect ratio */
+        transition: transform 0.5s ease; /* Smooth scaling effect */
     }
     
     .game-container-text h4,
     .game-container-text p,
     .game-container-text h3 {
-        opacity: 0; /* Initially hidden using opacity */
-        transform: translateY(10px); /* Slight downward position for animation effect */
-        transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1) ease, transform 1s ease; /* Adds smooth transition to text */
+        opacity: 0; /* Initially hidden */
+        transform: translateY(20px); /* Positioned slightly below */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth animation */
     }
     
     .game:hover .game-container-text h4,
@@ -1064,31 +1032,22 @@ input[type=submit]:hover {
     .game-container-text h2 {
         display: block;
     }
-    /* Show h5 and p elements when hovering over the image */
+    
+    .game:hover {
+        width: 200px; /* Limit width */
+        height: auto;
+    }
+    
+    /* Remove redundant styles for h4, p, and h3 inside hover */
     .game:hover .game-container-text h4,
     .game:hover .game-container-text p,
     .game:hover .game-container-text h3 {
-        display: block;
-        width: 1200px; 
-        margin-top: -10%;
-        height: auto;
+        width: 100%; /* Ensure width matches container */
+        margin-top: 0; /* Avoid unnecessary margin changes */
     }
-
-    .game:hover {
-        width: 1200px; /* Limit width */
-        height: auto;
-        
-    }
-
-    /* Ensure other text remains visible */
-    .game-container-text h2,
-    .game-container-text h3{
-        display: block;
-    }
-    /* end of the game section */
-    /* starting console and peripherals pages */
+     /* starting console and peripherals pages */
     
-    .con-peri-heder{
+     .con-peri-heder{
         margin-top: 5%;
        
     }
@@ -1096,10 +1055,6 @@ input[type=submit]:hover {
         padding: 30px;
         grid-template-columns: repeat(3, 30%);/* Create a grid with 3 columns, each taking up 30% of the width */
        
-    }
-    .console-peri-containter-img{
-        height: 900px;
-        
     }
     /* Container for the image and overlay */
     .image-conttainer {
@@ -1122,7 +1077,7 @@ input[type=submit]:hover {
         text-align: center;
         padding: 20px;
         padding-top: 100px;
-        font-size: 100px;
+        
     }
   
     /* Show the overlay when hovering over the image */
@@ -1138,16 +1093,11 @@ input[type=submit]:hover {
     }
     /*end of console and peripherals pages */
 
-
     /* up coming page */
-    /* up comeing  section */
-
-    #up-comig{
-        margin-top: 5%;
-        text-align: center;
-        font-size: 60px;
+    /* main  section */
+    #upcoming{
+        margin-top: 10%;  
     }
-    /* main img */
     .up-main-slideshow-container {
         max-width: 100%; 
         position: relative;
@@ -1158,30 +1108,17 @@ input[type=submit]:hover {
     /* Caption text */
     .up-main-text {
         color: #ffffff;
-        font-size:200%;
         bottom: 8px;
         width: 100%;
         
     }
-      
-    /* Number text (1/3 etc) */
-    .up-main-numbertext {
-        font-size: 60px;
-    }
-      
-    /* The dots/bullets/indicators */
-    .up-main-dot {
-        height: 50px;
-        width: 50px;
-       
-    }      
     .up-main-mySlides img{
-        height: 1500px;
+        height: 400px;
     }
     /* end of main */
+
     .up-image-container img {
         width: 100%;
-        height: 100%;
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
     
@@ -1201,13 +1138,12 @@ input[type=submit]:hover {
         transition: opacity 0.3s ease;
         padding: 20px;
         box-sizing: border-box;
-        
         color: #f0f0f0;
     }
     
     .up-image-container .up-details p {
         margin: 5px 0;
-        font-size: 60px;
+       
     }
     
     .up-image-container:hover img {
@@ -1217,22 +1153,24 @@ input[type=submit]:hover {
     
     .up-image-container:hover .up-details {
         opacity: 1;/* Make the details fully visible when the image is hovered */
-    }
     
+    }
+    .up-details p{
+        font-size: 5px;
+    }
     .up-image-container img {
-        width: 1500px;
+        width:350px ;
+        height: 250px;
     }
     .up-image-container {
         position: relative;
         width: 100%;
-        height: 900px;
+        height:;
     }
-    .up-title{
-        font-size: 70px;
+    .up-games h2{
+        font-size: 20px;
     }
     /* end of the up coming page */
-
-
 
     /* about us  */
     /* about section */
@@ -1255,27 +1193,23 @@ input[type=submit]:hover {
         justify-items: center;
         
     }
+    
     .about-header{
         width: 30%;
     }
     #about-desc{
         margin-top: 2%;
-        height: 1000px;
+        height: 100px;
         align-items: center;
-        font-size: 110%;
         border-radius: 40px;
     }
-     .about-information, .location-information{
+    .about-information, .location-information{
         margin: 5%;
         justify-self: left;
-        font-size: 60px;
         width: 90%;
     } 
     .branchers{
         width: 100%;
-    }
-    .branchers div img{
-        width: 600px;
     }
     .about-information  h2,  .location-information{
         text-align: left;
@@ -1284,20 +1218,13 @@ input[type=submit]:hover {
         gap: 3%;
         padding-bottom: 5%;
         width: 100%;
-        justify-self: center;
-        
-        
+        justify-self: center;  
     }
-    
     .branchers-img{
-        border-radius: 10px;
-        height: 1000px;
-        object-fit: cover;
-        
-    
+        height: 300px;
     }
     /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_zoom_hover */
-        .branchers-img:hover{
+    .branchers-img:hover{
         -ms-transform: scale(1.1); /* IE 9 */
         -webkit-transform: scale(1.1); /* Safari 3-8 */
         transform: scale(1.1); 
@@ -1311,7 +1238,7 @@ input[type=submit]:hover {
     }
     .about-table{
         width: 95%;
-        height: 600px;
+        height: 300px;
         display: table;
     }
     table {
@@ -1319,7 +1246,6 @@ input[type=submit]:hover {
         height: 100%;
         border-collapse: collapse; /* Collapse table borders for a cleaner look */
         margin: 20px 0;
-        font-size: 76px;
         text-align: left;
         color: #fff;
     }
@@ -1347,15 +1273,8 @@ input[type=submit]:hover {
         color: #ffffff;
         
     }
-    
     table tfoot td[colspan="3"] {
         border-top: 2px solid #444;
-    }
-    .branchers-text{
-        text-align: left;
-    }
-    .branchers-text-2{
-        text-align: right;
     }
     /* location section */
     .location{
@@ -1363,12 +1282,12 @@ input[type=submit]:hover {
         gap: 2%;
         width: 100%;
     }
-    
+        
     .first{
         order: 2;/* to shift the position */
     }
     .second{
-        
+            
         order: 1;/* to shift the position */
     }
     .location-des{
@@ -1376,19 +1295,18 @@ input[type=submit]:hover {
         flex-direction: row;
         gap: 2%;
         width: 100%;
-        
         justify-content: center;
     } 
     .location-map{
         width: 100%;
-        height: 1500px;
+        height: 200px;
     }
     /* end of about */
 
-
+        
     /* faq */
-     /* about section */
-     .faq_contener{
+    /* about section */
+    .faq_contener{
         display: flex;
         width: 100%;
         gap: 2%
@@ -1399,66 +1317,15 @@ input[type=submit]:hover {
     }
     /* sift the content of the two plasese */
     .faq_first{
-        order: 2;
+        order: 2;/* to shift the position */
     }
     .faq_second{
         margin-top: 6%;
-        order: 1;
+        order: 1;/* to shift the position */
+    }
+    .faq_first img{
+        height: 100%;
     }
     /* end of faq */
 
-
-    /* footer */
-    footer{
-        height: 1000px;
-        position: relative;
-    }
-    #contact_us{
-        text-align: left;
-        font-size: 100px;
-        
-    }
-   
-    .footer-container{
-        margin-top: 5%;
-        display: flex;
-        width: 100%;
-        gap: 5%;
-        height: 1500px;
-    }
-    .footer-container div{
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    .footer-container div p{
-        font-size: 80px;
-    }
-    input[type=text], select, textarea {
-        font-size: 70px;
-    }
-
-    input[type=email] {
-        font-size:70px;
-    }
-    
-    
-      
-    input[type=submit] {
-        height: 70px;
-    }
-    /* social media icons flexboxe */
-    .icon-img{
-        width: 300px;
-        height: 300px;
-    
-    }
-    .footer-icon{
-        gap: 13px;
-        margin: 5%;
-    }
-    #footer-logo{
-        height: 1500px;
-    }
-    /* end of the footer */
 }
