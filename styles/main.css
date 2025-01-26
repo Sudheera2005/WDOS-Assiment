@@ -29,6 +29,8 @@ header{
     width: 100%;
     z-index: 1000;/* Ensures the header stays above other elements on the page */
     margin: 0;
+    left: 0;
+    top: 0;
 
 }
 .navigation-sidenav {
@@ -196,7 +198,7 @@ input[type=submit]:hover {
 
 /* Start of home page */
 /* main imge of the ome page */
-section{
+main{
     margin-top: 12%;
 }
 .home-main-container{
@@ -212,6 +214,7 @@ section{
 video{
     object-fit: cover;  /* Ensures the video covers its container */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);/* Adds shadow for video*/
+    border-radius: 30px;
     
 }
 .game-main-text{ 
@@ -232,7 +235,7 @@ video{
     display: grid;/* Sets layout to grid */
     grid-template-columns: auto auto;/* Two-column layout */
     gap: 2%;
-    width: 100%;
+    width: 95%;
 
 }
 .home-int-container div{
@@ -376,6 +379,9 @@ video{
 /* strart of the game page */
 /* main image */
 /* General reset for box-sizing */
+.game_mine{
+    width: 95%;
+}
 * {
     box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
 }
@@ -481,8 +487,7 @@ img {
     position: relative;
     padding-top: 50px;
     display: flex;
-    gap: 2%;
-    margin: 2%;
+    gap: 2%; 
     flex-wrap: wrap;/* Allows items to wrap to the next line */
     width: 95%;/* Sets container width */
     justify-content: center;
@@ -492,9 +497,10 @@ img {
 }
 /* gmae section */
 .game {
+    margin-left: 0;
     position: relative;
     border: 1px solid #4a90e2;
-    width: 100%;
+    width: 95%;
     margin-bottom: 10px;
 }
 .game img{
@@ -558,18 +564,20 @@ img {
 
 /* main */
 /* Slideshow container */
-
-
+#upcoming{
+    margin-top: 10%;
+    margin-bottom: -5%;
+}
 .up-main-mySlides {display: none;}/* Hide all the images by default */
 .up-main-mySlides img{
     height: 300px;
+   
 }
 .up-main-slideshow-container {
     max-width: 1000px;/* Limits the maximum width of the slideshow */
     position: relative;
     margin: auto;
-}
-  
+}  
 /* Caption text */
 .up-main-text {
     color: #ffffff;
@@ -674,8 +682,9 @@ img {
 .about-main{
     background-color: #4682B4;
     text-align: center;/* Centers the text */
-    margin-top: 90px;
     font-size: 50px;
+    width: 95%;
+    
 }
 /* Default: Hide the table */
 .about-table {
@@ -684,7 +693,7 @@ img {
 
 /* Branches Section */
 .about-contener div{
-    width: 100%;
+    width: 95%;
 }
 .branchers-text{
     text-align: left;
@@ -727,6 +736,9 @@ img {
 /* End of the about us */
 
 /* FAQ Section Styling */
+#fsq-h1{
+    margin-top: 10%;
+}
 #faq  button, .accordion{
     font-size: 125%;
   
@@ -738,7 +750,7 @@ img {
     color: #ffffff;
     cursor: pointer;/* Change cursor to pointer to indicate interactivity */
     padding: 18px;
-    width: 100%;
+    width: 95%;
     text-align: left;
     outline: none;/* Remove default focus outline */
     transition: 0.4s;/* Smooth transition for hover effects */
@@ -820,6 +832,9 @@ input[type=submit]:hover {
     body{ margin-top: 0;
         font-size: 13px;
         width: 100%;
+    }
+    main{
+        top:0;
     }
 
     /* Hide the hamburger icon */
@@ -953,8 +968,8 @@ input[type=submit]:hover {
         background-color: #4A90e2;
     } 
     .banner-image{
-        width: 150px;
-        height: 100px; 
+        width: 270px;
+        height: 150px; 
     }
     .banner-image:hover{
         transform: scale(1.2);
@@ -1165,7 +1180,7 @@ input[type=submit]:hover {
     .up-image-container {
         position: relative;
         width: 100%;
-        height:;
+        
     }
     .up-games h2{
         font-size: 20px;
