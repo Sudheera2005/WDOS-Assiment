@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/order.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo-text">Grotto Gaming</a>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav id="nav-links">
+            <a href="#processors">Processors</a>
+            <a href="#graphic">Graphic Cards</a>
+            <a href="#motherboard">Motherboard</a>
+            <a href="#memory">Memory</a>
+            <a href="#storage">Storage Devices</a>
+        </nav>
+    </header>
+    
+    <button id="cart"><i class='bx bxs-cart-add'></i></button>
+    <main>
+        <h1>Order page</h1><br>
+        <section id="processors">
+            <h2>Processors</h2>
+            <div class="processorsContainer">
+               <div class="container">
+                <div>
+                    <img class="image" src="./Image/order/p1.jpg" alt="Processors 01">
+                </div>
+                <div>
+                    <h3 id="p1iterm">Intel Core i9-14900K</h3>
+                    <p class="description">
+                        Top-tier performance, ideal for demanding tasks and high-end gaming. High core/thread count, pushing clock speeds.1 
+                    </p>
+                    <div class="price">
+                        <p id="p1price">Rs.130000</p>
+                        <i id="p1less" class='bx bxs-left-arrow' ></i>
+                        <input type="number" class="quantity" id="p1quantity">
+                        <i id="p1add" class='bx bxs-right-arrow'></i>
+                        <i id="p1cart" class='bx bxs-cart-add'></i>
+                    </div>
+                    <p id="responseMessage1"></p>
+                </div>
+               </div>
+
+               <div class="container">
+                <div>
+                    <img class="image" src="./Image/order/p2.jpg" alt="Processors 02">
+                </div>
+                <div>
+                    <h3 id="p2iterm">Intel Core i7-14700K:</h3>
+                    <p class="description">
+                        Excellent balance of gaming and productivity. Strong multi-core performance, great for content creation.
+                    </p>
+                    <div class="price">
+                        <p id="p2price">Rs.1400000</p>
+                        <i id="p2less" class='bx bxs-left-arrow' ></i>
+                        <input type="number" class="quantity" id="p2quantity">
+                        <i id="p2add" class='bx bxs-right-arrow'></i>
+                        <i id="p2cart" class='bx bxs-cart-add'></i>
+                    </div>
+                    <p id="responseMessage2"></p>
+                </div>
+               </div>
+               <div class="container">
+                <div>
+                    <img class="image" src="./Image/order/p3.jpg" alt="Processors 03">
+                </div>
+                <div>
+                    <h3 id="p3iterm">Intel Core i5-14600K</h3>
+                    <p class="description">
+                        Solid mid-range gaming and general use. Good balance of performance and cost.
+                    </p>
+                    <div class="price">
+                        <p id="p3price">Rs.70935</p>
+                        <i id="p3less" class='bx bxs-left-arrow' ></i>
+                        <input type="number" class="quantity" id="p3quantity">
+                        <i id="p3add" class='bx bxs-right-arrow'></i>
+                        <i id="p3cart" class='bx bxs-cart-add'></i>
+                    </div>
+                    <p id="responseMessage3"></p>
+                </div>
+               </div>
+               <div class="container">
+                <div>
+                    <img class="image" src="./Image/order/p4.jpg" alt="Processors 04">
+                </div>
+                <div>
+                    <h3 id="p4iterm">AMD Ryzen 9 7950X3D</h3>
+                    <p class="description">
+                        Extreme performance, especially in gaming, thanks to 3D V-Cache technology. Top-tier for enthusiasts.
+                    </p>
+                    <div class="price">
+                        <p id="p4price">Rs.221673</p>
+                        <i id="p4less" class='bx bxs-left-arrow' ></i>
+                        <input type="number" class="quantity" id="p4quantity">
+                        <i id="p4add" class='bx bxs-right-arrow'></i>
+                        <i id="p4cart" class='bx bxs-cart-add'></i>
+                    </div>
+                    <p id="responseMessage4"></p>
+                </div>
+               </div>
+               <div class="container">
+                <div>
+                    <img class="image" src="./Image/order/p5.jpg" alt="Processors 05">
+                </div>
+                <div>
+                    <h3 id="p5iterm">AMD Ryzen 7 7800X3D</h3>
+                    <p class="description">
+                        Gaming-focused CPU with exceptional performance. 3D V-Cache provides a significant gaming boost.
+                    </p>
+                    <div class="price">
+                        <p id="p5price">Rs.133004</p>
+                        <i id="p5less" class='bx bxs-left-arrow' ></i>
+                        <input type="number" class="quantity" id="p5quantity">
+                        <i id="p5add" class='bx bxs-right-arrow'></i>
+                        <i id="p5cart" class='bx bxs-cart-add'></i>
+                    </div>
+                    <p id="responseMessage5"></p>
+                </div>
+               </div>
+               <div class="container">
+                <div>
+                    <img class="image" src="./Image/order/p6.jpg" alt="Processors 06">
+                </div>
+                <div>
+                    <h3 id="p6iterm">AMD Ryzen 7 5800X3D</h3>
+                    <p class="description">
+                        Very strong gaming performance on the AM4 platform. Great for those not wanting to upgrade motherboards.
+                    </p>
+                    <div class="price">
+                        <p id="p6price">Rs.88669</p>
+                        <i id="p6less" class='bx bxs-left-arrow' ></i>
+                        <input type="number" class="quantity" id="p6quantity">
+                        <i id="p6add" class='bx bxs-right-arrow'></i>
+                        <i id="p6cart" class='bx bxs-cart-add'></i>
+                    </div>
+                    <p id="responseMessage6"></p>
+                </div>
+               </div>
+               <div class="container">
+                <div>
+                    <img class="image" src="./Image/order/p7.jpg" alt="Processors 07">
+                </div>
+                <div>
+                    <h3 id="p7iterm">AMD Ryzen 5 7600X</h3>
+                    <p class="description">
+                        Excellent value for mid-range gaming and general use. Strong performance in its price bracket.
+                    </p>
+                    <div class="price">
+                        <p id="p7price">Rs.65024</p>
+                        <i id="p7less" class='bx bxs-left-arrow' ></i>
+                        <input type="number" class="quantity" id="p7quantity">
+                        <i id="p7add" class='bx bxs-right-arrow'></i>
+                        <i id="p7cart" class='bx bxs-cart-add'></i>
+                    </div>
+                    <p id="responseMessage7"></p>
+                </div>
+               </div>
+               <div class="container">
+                <div>
+                    <img class="image" src="./Image/order/p8.jpg" alt="Processors 08">
+                </div>
+                <div>
+                    <h3 id="p8iterm">Intel Core i5-13400F</h3>
+                    <p class="description">
+                        A great value option, providing solid performance for gaming and everyday tasks.
+                    </p>
+                    <div class="price">
+                        <p id="p8price">Rs.53201</p>
+                        <i id="p8less" class='bx bxs-left-arrow' ></i>
+                        <input type="number" class="quantity" id="p8quantity">
+                        <i id="p8add" class='bx bxs-right-arrow'></i>
+                        <i id="p8cart" class='bx bxs-cart-add'></i>
+                    </div>
+                    <p id="responseMessage8"></p>
+                </div>
+               </div>
+
+            </div>
+        </section>
+        <section id="graphic">
+            <h2>Graphic</h2><br>
+            <div class="graphicContainer">
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/g1.jpg" alt="Graphic 01">
+                    </div>
+                    <div>
+                        <h3 id="g1iterm">Nvidia GeForce RTX 5090</h3>
+                        <p class="description">
+                            The current top-tier, offering unparalleled performance. For those who want the absolute best.
+                        </p>
+                        <div class="price">
+                            <p id="g1price">Rs.590419</p>
+                            <i id="g1less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="g1quantity">
+                            <i id="g1add" class='bx bxs-right-arrow'></i>
+                            <i id="g1cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessageg1"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/g2.jpg" alt="Graphic 02">
+                    </div>
+                    <div>
+                        <h3 id="g2iterm">Nvidia GeForce RTX 4080 Super</h3>
+                        <p class="description">
+                            High-end performance, excellent for 4K gaming and demanding tasks. A very powerful card.
+                        </p>
+                        <div class="price">
+                            <p id="g2price">Rs.295062</p>
+                            <i id="g2less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="g2quantity">
+                            <i id="g2add" class='bx bxs-right-arrow'></i>
+                            <i id="g2cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessageg2"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/g3.jpg" alt="Graphic 03">
+                    </div>
+                    <div>
+                        <h3 id="g3iterm">Nvidia GeForce RTX 4070 Super</h3>
+                        <p class="description">
+                            A fantastic mid-range option, providing excellent 1440p and solid 4K performance. Great value.
+                        </p>
+                        <div class="price">
+                            <p id="g3price">Rs.176919</p>
+                            <i id="g3less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="g3quantity">
+                            <i id="g3add" class='bx bxs-right-arrow'></i>
+                            <i id="g3cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessageg3"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/g4.jpg" alt="Graphic 04">
+                    </div>
+                    <div>
+                        <h3 id="g4iterm">Nvidia GeForce RTX 4060</h3>
+                        <p class="description">
+                            A good entry-level card for 1080p gaming, with decent performance and efficiency.
+                        </p>
+                        <div class="price">
+                            <p id="g4price">Rs.88607</p>
+                            <i id="g4less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="g4quantity">
+                            <i id="g4add" class='bx bxs-right-arrow'></i>
+                            <i id="g4cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessageg4"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/g5.jpg" alt="Graphic 05">
+                    </div>
+                    <div>
+                        <h3 id="g5iterm">AMD Radeon RX 7900 XTX</h3>
+                        <p class="description">
+                            AMD's high-end contender, offering strong 4K performance and competitive features.
+                        </p>
+                        <div class="price">
+                            <p id="g5price">Rs.295357</p>
+                            <i id="g5less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="g5quantity">
+                            <i id="g5add" class='bx bxs-right-arrow'></i>
+                            <i id="g5cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessageg5"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/g6.jpg" alt="Graphic 06">
+                    </div>
+                    <div>
+                        <h3 id="g6iterm">AMD Radeon RX 7800 XT</h3>
+                        <p class="description">
+                            A strong mid-range card, excellent for 1440p gaming and good 4K performance.
+                        </p>
+                        <div class="price">
+                            <p id="g6price">Rs.147383</p>
+                            <i id="g6less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="g6quantity">
+                            <i id="g6add" class='bx bxs-right-arrow'></i>
+                            <i id="g6cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessageg6"></p>
+                    </div>
+                </div>
+                
+                </div>
+            
+        </section>
+        <section id="motherboard">
+            <h2>Motherboard</h2><br>
+            <div class="motherboardContainer">
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/m1.jpg" alt="Motherboard 01">
+                    </div>
+                    <div>
+                        <h3 id="m1iterm">ASUS ROG Maximus Z790 Hero</h3>
+                        <p class="description">
+                            High-end gaming, robust power delivery, advanced features, and extensive connectivity. For top-tier Intel builds. 
+                        </p>
+                        <div class="price">
+                            <p id="m1price">Rs.177214</p>
+                            <i id="m1less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="m1quantity">
+                            <i id="m1add" class='bx bxs-right-arrow'></i>
+                            <i id="m1cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessagem1"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/m2.jpg" alt="Motherboard 02">
+                    </div>
+                    <div>
+                        <h3 id="m2iterm">MSI MAG B760 Tomahawk WIFI</h3>
+                        <p class="description">
+                            Solid mid-range, good VRMs, Wi-Fi, and ample M.2 slots. Reliable for gaming and everyday use.
+                        </p>
+                        <div class="price">
+                            <p id="m2price">Rs.73839</p>
+                            <i id="m2less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="m2quantity">
+                            <i id="m2add" class='bx bxs-right-arrow'></i>
+                            <i id="m2cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessagem2"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/m3.jpg" alt="Motherboard 03">
+                    </div>
+                    <div>
+                        <h3 id="m3iterm">Gigabyte Z790 AORUS Elite AX</h3>
+                        <p class="description">
+                            Feature rich, good overclocking, and stylish design. Strong performance for 13th and 14th gen intel CPUs.
+                        </p>
+                        <div class="price">
+                            <p id="m3price">Rs.103375</p>
+                            <i id="m3less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="m3quantity">
+                            <i id="m3add" class='bx bxs-right-arrow'></i>
+                            <i id="m3cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessagem3"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/m4.jpg" alt="Motherboard 04">
+                    </div>
+                    <div>
+                        <h3 id="m4iterm">ASUS ROG Crosshair X670E Hero</h3>
+                        <p class="description">
+                            Premium AMD motherboard, PCIe 5.0, high-end VRMs, and extensive connectivity. For Ryzen 7000 series.
+                        </p>
+                        <div class="price">
+                            <p id="m4price">Rs.177214</p>
+                            <i id="m4less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="m4quantity">
+                            <i id="m4add" class='bx bxs-right-arrow'></i>
+                            <i id="m4cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessagem4"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/m5.jpg" alt="Motherboard 05">
+                    </div>
+                    <div>
+                        <h3 id="m5iterm">MSI MAG B650 Tomahawk WIFI</h3>
+                        <p class="description">
+                            Reliable AM5 board, Wi-Fi, good M.2 support, and solid performance. Great for Ryzen 7000 gaming.
+                        </p>
+                        <div class="price">
+                            <p id="m5price">Rs.82700</p>
+                            <i id="m5less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="m5quantity">
+                            <i id="m5add" class='bx bxs-right-arrow'></i>
+                            <i id="m5cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessagem5"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/m6.jpg" alt="Motherboard 06">
+                    </div>
+                    <div>
+                        <h3 id="m6iterm">Gigabyte X670 AORUS Elite AX</h3>
+                        <p class="description">
+                            Feature rich, good VRMs, and stylish design. Strong performance for Ryzen 7000 series CPUs.
+                        </p>
+                        <div class="price">
+                            <p id="m6price">Rs.103375</p>
+                            <i id="m6less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="m6quantity">
+                            <i id="m6add" class='bx bxs-right-arrow'></i>
+                            <i id="m6cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessagem6"></p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+        <section id="memory">
+            <h2>Memory</h2><br>
+            <div class="memoryContainer">
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/y1.jpg" alt="Memory 01">
+                    </div>
+                    <div>
+                        <h3 id="y1iterm">G.Skill Trident Z5 Neo RGB DDR5-6000</h3>
+                        <p class="description">
+                            High-performance DDR5, excellent for AMD Ryzen, RGB lighting, and tight timings (32GB kits).
+                        </p>
+                        <div class="price">
+                            <p id="y1price">Rs.44303</p>
+                            <i id="y1less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="y1quantity">
+                            <i id="y1add" class='bx bxs-right-arrow'></i>
+                            <i id="y1cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessagey1"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/y2.jpg" alt="Memory 02">
+                    </div>
+                    <div>
+                        <h3 id="y2iterm">G.Skill Trident Z5 RGB DDR5-6000</h3>
+                        <p class="description">
+                            Top-tier DDR5, optimized for Intel, vibrant RGB, and strong overclocking potential.
+                        </p>
+                        <div class="price">
+                            <p id="y2price">Rs.53164</p>
+                            <i id="y2less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="y2quantity">
+                            <i id="y2add" class='bx bxs-right-arrow'></i>
+                            <i id="y2cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessagey2"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/y3.jpg" alt="Memory 03">
+                    </div>
+                    <div>
+                        <h3 id="y3iterm">Corsair Vengeance LPX DDR4-3200</h3>
+                        <p class="description">
+                            Reliable DDR4, low-profile design, good for budget builds, and wide compatibility (16GB).
+                        </p>
+                        <div class="price">
+                            <p id="y3price">Rs.17721</p>
+                            <i id="y3less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="y3quantity">
+                            <i id="y3add" class='bx bxs-right-arrow'></i>
+                            <i id="y3cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessagey3"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/y4.jpg" alt="Memory 04">
+                    </div>
+                    <div>
+                        <h3 id="y4iterm">Kingston Fury Beast DDR5</h3>
+                        <p class="description">
+                            Solid DDR5 performance, reliable, and available in various speeds and capacities.
+                        </p>
+                        <div class="price">
+                            <p id="y4price">Rs.12000</p>
+                            <i id="y4less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="y4quantity">
+                            <i id="y4add" class='bx bxs-right-arrow'></i>
+                            <i id="y4cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessagey4"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/y5.jpg" alt="Memory 05">
+                    </div>
+                    <div>
+                        <h3 id="y5iterm">Teamgroup T-Force Delta RGB DDR5</h3>
+                        <p class="description">
+                            Stylish RGB DDR5, good speeds, and compatibility for both Intel and AMD platforms.
+                        </p>
+                        <div class="price">
+                            <p id="y5price">Rs.1300</p>
+                            <i id="y5less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="y5quantity">
+                            <i id="y5add" class='bx bxs-right-arrow'></i>
+                            <i id="y5cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessagey5"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="storage">
+            <h2>Storage</h2><br>
+            <div class="storageContainer">
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/s1.jpg" alt="Storage 01">
+                    </div>
+                    <div>
+                        <h3 id="s1iterm">Samsung 990 PRO NVMe SSD</h3>
+                        <p class="description">
+                            High-performance PCIe 4.0 NVMe, extremely fast read/write speeds, ideal for demanding applications and gaming.
+                        </p>
+                        <div class="price">
+                            <p id="s1price">Rs.88607</p>
+                            <i id="s1less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="s1quantity">
+                            <i id="s1add" class='bx bxs-right-arrow'></i>
+                            <i id="s1cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessages1"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/s2.jpg" alt="Storage 02">
+                    </div>
+                    <div>
+                        <h3 id="s2iterm">Samsung T7 Portable SSD</h3>
+                        <p class="description">
+                            Compact and fast portable SSD, USB 3.2 Gen 2, excellent for transferring large files on the go.
+                        </p>
+                        <div class="price">
+                            <p id="s2price">Rs.1400</p>
+                            <i id="s2less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="s2quantity">
+                            <i id="s2add" class='bx bxs-right-arrow'></i>
+                            <i id="s2cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessages2"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/s3.jpg" alt="Storage 03">
+                    </div>
+                    <div>
+                        <h3 id="s3iterm">SanDisk Extreme Portable SSD</h3>
+                        <p class="description">
+                            Rugged and durable portable SSD, designed for outdoor use, fast transfer speeds, and reliable storage.
+                        </p>
+                        <div class="price">
+                            <p id="s3price">Rs.13432</p>
+                            <i id="s3less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="s3quantity">
+                            <i id="s3add" class='bx bxs-right-arrow'></i>
+                            <i id="s3cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessages3"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/s4.jpg" alt="Storage 04">
+                    </div>
+                    <div>
+                        <h3 id="s4iterm">Western Digital Blue HDD</h3>
+                        <p class="description">
+                            Reliable and affordable HDD, good for general storage, large capacities available.
+                        </p>
+                        <div class="price">
+                            <p id="s4price">Rs.13400</p>
+                            <i id="s4less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="s4quantity">
+                            <i id="s4add" class='bx bxs-right-arrow'></i>
+                            <i id="s4cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessages4"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/s5.jpg" alt="Storage 05">
+                    </div>
+                    <div>
+                        <h3 id="s5iterm">Seagate Barracuda HDD</h3>
+                        <p class="description">
+                            Versatile HDD, suitable for various applications, large storage capacity, and decent performance.
+                        </p>
+                        <div class="price">
+                            <p id="s5price">Rs.1300</p>
+                            <i id="s5less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="s5quantity">
+                            <i id="s5add" class='bx bxs-right-arrow'></i>
+                            <i id="s5cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessages5"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <img class="image" src="./Image/order/s6.jpg" alt="Storage 06">
+                    </div>
+                    <div>
+                        <h3 id="s6iterm">USB Flash Drives</h3>
+                        <p class="description">
+                            Very portable, small storage devices, that are very usefull for transferring small amounts of data.
+                        </p>
+                        <div class="price">
+                            <p id="s6price">Rs.1000</p>
+                            <i id="s6less" class='bx bxs-left-arrow' ></i>
+                            <input type="number" class="quantity" id="s6quantity">
+                            <i id="s6add" class='bx bxs-right-arrow'></i>
+                            <i id="s6cart" class='bx bxs-cart-add'></i>
+                        </div>
+                        <p id="responseMessages6"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+    </main>
+    <div id="tableAction">
+        <table id="mycartTable">
+            <!-- https://www.w3schools.com/tags/tag_tfoot.asp -->
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Product Name</th>
+                    <th >Unit price</th>
+                    <th >Quantity</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="t" colspan="4">Total</td>
+                    <td id="total"></td>
+                </tr>
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6">Contact us at <a href="mailto:inf@GrottoGaming.lk" style="color: #39ff14; text-decoration: none;">inf@grottogaming.lk</a> for any issue.</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div  class="butt">
+            <button class="buttons" id="buy">Buy</button>
+            <button class="buttons" id="add">Add favorite</button>
+            <button class="buttons" id="apply">Apply favourites</button>
+        </div>
+       <p id="buyMessage"></p>
+        
+    </div>
+    <footer>
+        <p class="footer">© 2025 Sudheera Perera. All rights reserved.</p>
+    </footer>
+
+    <script src="./scripts/order.js" defer></script>
+
+
+    
+</body>
+</html>
