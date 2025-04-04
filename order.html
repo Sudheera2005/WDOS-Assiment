@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/order.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo-text">Grotto Gaming</a>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav id="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./games.html">Games</a>
+            <a href="./console.html">Consoles</a>
+            <a href="./peripherals.html">Paripherals</a>
+            <a href="./up.html">Upcoming</a>
+            <a href="./about.html">About Us</a>
+            <a href="./FAQ.html">FAQ</a>
+            <a href="./order.html">Order</a>
+        </nav>
+    </header>
+    
+    <button id="cart"><i class='bx bxs-cart-add'></i></button>
+    <main>
+        <div id = "ProductsFrame"></div>
+        
+        <div id="tableAction">
+            <h1>Your Cart<span id="itermCount"></span></h1>
+            <table id="mycartTable">
+                <!-- https://www.w3schools.com/tags/tag_tfoot.asp -->
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Product Name</th>
+                        <th >Unit price</th>
+                        <th >Quantity</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="t" colspan="4">Total</td>
+                        <td id="total"></td>
+                        <td></td>
+                    </tr>
+                
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">Contact us at <a href="mailto:inf@GrottoGaming.lk" style="color: #39ff14; text-decoration: none;">inf@grottogaming.lk</a> for any issue.</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p id="buyMessage"></p>
+            <div  class="butt">
+                <button class="buttons" id="buy">Buy</button>
+                <button class="buttons" id="add">Add favorite</button>
+                <button class="buttons" id="apply">Apply favourites</button>
+            </div>
+       
+        
+        </div>
+    </main>
+    
+    <footer>
+        <p class="footer">© 2025 Sudheera Perera. All rights reserved.</p>
+    </footer>
+
+    <script src="./scripts/order.js" defer></script>
+
+
+    
+</body>
+</html>

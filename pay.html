@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/order.css">
+    <title>pay</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo-text" > Grotto Gaming</a>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./games.html">Games</a>
+            <a href="./console.html">Consoles</a>
+            <a href="./peripherals.html">Paripherals</a>
+            <a href="./up.html">Upcoming</a>
+            <a href="./about.html">About Us</a>
+            <a href="./FAQ.html">FAQ</a>
+            <a href="./order.html">Order</a>
+        </nav>
+
+    </header>
+    <main><br><br>
+        <div id="pay_frame">
+            <div>
+                <h2 class="h">Delivery information </h2>
+            </div><br><br>
+            <div>
+                <label class="label">Full Name</label><br>
+                <input class="input" type="text" id="input1"><br>
+                <label class="label">Number</label><br>
+                <input class="input" type="tel" id="input2" placeholder="+94- 774321768"><br>
+                <label class="label">Address</label><br>
+                <input class="input" type="text" id="input3"><br>
+            </div>
+            <div>
+                <h2 class="e">Payment method</h2>
+            </div><br><br>
+            <div>
+                <label class="label">Card Number</label><br>
+                <input class="input" type="number" id="input4"><br>
+                <label class="label">Name on the Card</label><br>
+                <input class="input" type="text" id="input5"><br>
+                <label class="label">Expiration date</label><br>
+                <input class="input" type="text" id="input6" placeholder="05">
+                <input class="input" type="text" id="input7" placeholder="29"><br>
+                <label class="label">Code</label><br>
+                <input class="input" type="number" id="input8" placeholder="078"><br>
+            </div>
+            <button id="paynow" class="pay">Pay Now</button>
+            <p id="payMessage"></p>
+        </div>
+        
+    </main>
+    <footer>
+        <p class="footer">© 2025 Sudheera Perera. All rights reserved.</p>
+    </footer>
+    <script src="./scripts/pay.js" defer></script>
+    
+</body>
+</html>

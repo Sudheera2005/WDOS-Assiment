@@ -10,8 +10,8 @@ const urlsToCache = [
   '/up.html',
   '/styles/main.css',
   '/script/game-store.js',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png'
+  '/favicons/icons/icon-192x192.png',
+  '/favicons/icons/icon-512x512.png'
 ];
 
 self.addEventListener('install', (event) => {
