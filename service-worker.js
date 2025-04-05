@@ -7,6 +7,8 @@ const urlsToCache = [
   '/FAQ.html',
   '/games.html',
   '/peripherals.html',
+  '/order.html',
+  '/pay.html',
   '/up.html',
   '/styles/main.css',
   '/script/game-store.js',
