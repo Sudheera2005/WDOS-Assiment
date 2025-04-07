@@ -15,7 +15,7 @@ const urlsToCache = [
   '/script/order.js',
   '/script/pay.js',
   '/script/game-store.js',
-  '/Products.json',
+  '/products.json',
   '/favicons/icons/icon-192x192.png',
   '/favicons/icons/icon-512x512.png'
 ];

@@ -86,7 +86,7 @@ main{
 }
 /* Individual product card */
 .product {
-    background: #fff;
+    background:  #fff3e0;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -124,7 +124,7 @@ main{
 /* Price styling */
 .product p[id*="price"] {
     font-weight: bold;
-    color: #ff6600;
+    color: #cc5200;
 }
 
 /* Quantity input */
