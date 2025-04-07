@@ -1,4 +1,4 @@
-fetch("products.json")
+fetch("Products.json")
     .then(response => response.json())
     .then(data => {
         document.addEventListener("DOMContentLoaded", function () {

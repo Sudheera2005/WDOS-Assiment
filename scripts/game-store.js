@@ -29,44 +29,4 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
-////// freyuently ask question part
 
-
-
-
-////////////////// up coming 
-function showSlides() {
-  console.log("showSlides function triggered");  // Confirm function is running
-  
-  let i;
-  let slides = document.getElementsByClassName("up-main-mySlides");
-  let dots = document.getElementsByClassName("up-main-dot");
-
-  // Hide all slides initially
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-
-  slideIndex++;  // Increment the slide index
-  if (slideIndex > slides.length) {
-    slideIndex = 1;  // Reset to first slide if beyond range
-  }
-
-  // Remove active class from all dots
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" up-main-active", "");
-  }
-
-  // Show the current slide and add active class to the corresponding dot
-  console.log(`Displaying slide ${slideIndex}`);  // Corrected
-  console.log(slides, slideIndex);                // Corrected
-  slides[slideIndex - 1].style.display = "block";  
-  dots[slideIndex - 1].className += " up-main-active"; 
-
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-
-
-
-
-///////////////////// up coming 
