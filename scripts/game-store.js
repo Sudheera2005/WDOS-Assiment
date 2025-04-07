@@ -35,13 +35,8 @@ for (i = 0; i < acc.length; i++) {
 
 
 ////////////////// up coming 
-let slideIndex = 0;
-document.addEventListener("DOMContentLoaded", function () {
-  showSlides();
-});
-
 function showSlides() {
-  console.log("showSlides function triggered");  // Debugging: Confirm function is running
+  console.log("showSlides function triggered");  // Confirm function is running
   
   let i;
   let slides = document.getElementsByClassName("up-main-mySlides");
@@ -63,12 +58,14 @@ function showSlides() {
   }
 
   // Show the current slide and add active class to the corresponding dot
-  console.log(`Displaying slide ${slideIndex}`);  // Debugging: Show which slide is displayed
+  console.log(`Displaying slide ${slideIndex}`);  // Corrected
+  console.log(slides, slideIndex);                // Corrected
   slides[slideIndex - 1].style.display = "block";  
   dots[slideIndex - 1].className += " up-main-active"; 
 
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
 
 
 
