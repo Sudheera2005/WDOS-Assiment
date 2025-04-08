@@ -21,98 +21,128 @@ fetch("products.json")
             let y = 1;
             let s = 1;
 
+            let outputP = `
+                <section id="processors">
+                    <h1 class="section-title">Processors</h1>
+                    <div class="product-grid">
+                `;
+
+            let outputG = `
+                <section id="graphiccards">
+                    <h1 class="section-title">Graphic Cards</h1>
+                    <div class="product-grid">
+                `;
+
+            let outputM = `
+                <section id="motherboard">
+                    <h1 class="section-title">Motherboard</h1>
+                    <div class="product-grid">
+                `;
+
+            let outputY = `
+                <section id="memory">
+                    <h1 class="section-title">Memory</h1>
+                    <div class="product-grid">
+                `;
+
+            let outputS = `
+                <section id="storage">
+                    <h1 class="section-title">Storage</h1>
+                    <div class="product-grid">
+                `;
+s
             data.forEach(item => {
-                
-                if (x<9){
-                    output += `
+                if (x < 9) {
+                    outputP += `
                         <div class="product">
                             <img class="image" src="${item.Image}" alt="${item.Name}" />
                             <h2 id="p${p}iterm">${item.Name}</h2>
                             <p>${item.Details}</p>
-                            <p id="p${p}price">Price: ${item.Price}</p>
-                            <i id="p${p}less" class='bx bxs-left-arrow' ></i>
+                            <p id="p${p}price" class="price">Price: ${item.Price}</p>
+                            <i id="p${p}less" class='bx bxs-left-arrow'></i>
                             <input type="number" class="quantity" id="p${p}quantity"> 
                             <i id="p${p}add" class='bx bxs-right-arrow'></i>
                             <i id="p${p}cart" class='bx bxs-cart-add'></i>
                             <p id="responseMessagep${p}"></p>
                         </div>
-                     `;
-                     // Insert all products individually
-                     document.getElementById('ProductsFrame').innerHTML = output;
-                     p += 1;
-                }else if (x<15){
-                    output += `
+                    `;
+                    p += 1;
+                } else if (x < 15) {
+                    outputG += `
                         <div class="product">
                             <img class="image" src="${item.Image}" alt="${item.Name}" />
                             <h2 id="g${g}iterm">${item.Name}</h2>
                             <p>${item.Details}</p>
                             <p id="g${g}price">Price: ${item.Price}</p>
-                            <i id="g${g}less" class='bx bxs-left-arrow' ></i>
+                            <i id="g${g}less" class='bx bxs-left-arrow'></i>
                             <input type="number" class="quantity" id="g${g}quantity">
                             <i id="g${g}add" class='bx bxs-right-arrow'></i>
                             <i id="g${g}cart" class='bx bxs-cart-add'></i>
                             <p id="responseMessageg${g}"></p>
                         </div>
-                     `;
-                     // Insert all products individually
-                     document.getElementById('ProductsFrame').innerHTML = output;
-                     g += 1;
-                }else if (x<21){
-                    output += `
+                    `;
+                    g += 1;
+                } else if (x < 21) {
+                    outputM += `
                         <div class="product">
                             <img class="image" src="${item.Image}" alt="${item.Name}" />
                             <h2 id="m${m}iterm">${item.Name}</h2>
                             <p>${item.Details}</p>
                             <p id="m${m}price">Price: ${item.Price}</p>
-                            <i id="m${m}less" class='bx bxs-left-arrow' ></i>
+                            <i id="m${m}less" class='bx bxs-left-arrow'></i>
                             <input type="number" class="quantity" id="m${m}quantity">
                             <i id="m${m}add" class='bx bxs-right-arrow'></i>
                             <i id="m${m}cart" class='bx bxs-cart-add'></i>
                             <p id="responseMessagem${m}"></p>
                         </div>
-                     `;
-                     // Insert all products individually
-                     document.getElementById('ProductsFrame').innerHTML = output;
-                     m += 1;
-                }else if (x<26){
-                    output += `
+                    `;
+                    m += 1;
+                } else if (x < 26) {
+                    outputY += `
                         <div class="product">
                             <img class="image" src="${item.Image}" alt="${item.Name}" />
                             <h2 id="y${y}iterm">${item.Name}</h2>
                             <p>${item.Details}</p>
                             <p id="y${y}price">Price: ${item.Price}</p>
-                            <i id="y${y}less" class='bx bxs-left-arrow' ></i>
+                            <i id="y${y}less" class='bx bxs-left-arrow'></i>
                             <input type="number" class="quantity" id="y${y}quantity">
                             <i id="y${y}add" class='bx bxs-right-arrow'></i>
                             <i id="y${y}cart" class='bx bxs-cart-add'></i>
                             <p id="responseMessagey${y}"></p>
                         </div>
-                     `;
-                     // Insert all products individually
-                     document.getElementById('ProductsFrame').innerHTML = output;
-                     y += 1;
-                }else if (x<32){
-                    output += `
+                    `;
+                    y += 1;
+                } else if (x < 32) {
+                    outputS += `
                         <div class="product">
                             <img class="image" src="${item.Image}" alt="${item.Name}" />
                             <h2 id="s${s}iterm">${item.Name}</h2>
                             <p>${item.Details}</p>
                             <p id="s${s}price">Price: ${item.Price}</p>
-                            <i id="s${s}less" class='bx bxs-left-arrow' ></i>
+                            <i id="s${s}less" class='bx bxs-left-arrow'></i>
                             <input type="number" class="quantity" id="s${s}quantity">
                             <i id="s${s}add" class='bx bxs-right-arrow'></i>
                             <i id="s${s}cart" class='bx bxs-cart-add'></i>
                             <p id="responseMessages${s}"></p>
                         </div>
-                     `;
-                     // Insert all products individually
-                     document.getElementById('ProductsFrame').innerHTML = output;
-                     s += 1;
+                    `;
+                    s += 1;
                 }
-                
-                
+            
                 x += 1;
             });
+            
+            // Close all sections
+            outputP += `</div></section>`;
+            outputG += `</div></section>`;
+            outputM += `</div></section>`;
+            outputY += `</div></section>`;
+            outputS += `</div></section>`;
+
+            
+            // Combine everything into one output and inject into DOM
+            document.getElementById('ProductsFrame').innerHTML = outputP + outputG + outputM + outputY + outputS;
+            
             // display opning quantity  count 
             for (let i = 1; i <= 8; i++){
                 let inputelement1 = document.getElementById(`p${i}quantity`);
