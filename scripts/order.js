@@ -10,7 +10,7 @@ fetch("products.json")
         }
         
         console.log("Parsed JSON Data:", data);
-
+        document.getElementById("itermCount").style.color = "#ffe600";
         // Check if data is an array
         if (Array.isArray(data)) {
             let output = ''; // Store all items before inserting into HTML
@@ -224,13 +224,12 @@ s
 
 
             // Function to set up an event listener for the Cart button
+            let totalItarm = 0;
             let No = 1;
             let whole_amount = 0;
-            let cart = [];
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];;
             function setupCartButton(cartButton, input, message, product, price) {
                 cartButton.addEventListener("click", () => {
-                    // console.log("oke it does work");
-            
                     let table = document.getElementById("mycartTable");
                     let rows = table.getElementsByTagName("tr");
                     
@@ -249,8 +248,6 @@ s
                         let index = values.indexOf(product.textContent);// Get index of existing product
                     
                         if (index !== -1){
-                        
-
                             // Product already exists, update quantity & total
                             let existingRow = rows[index + 1]; // Adjust for 1-based index
                             let quantityCell = existingRow.cells[3]; // Quantity column
@@ -266,11 +263,13 @@ s
                                 totalCell.innerText = "Rs." + newTotal;
 
                                 // Update localStorage
-                                updateLocalStorageQuantity(
-                                    product.textContent.trim(),
-                                    price.textContent.replace("Price: Rs.", "").trim(),
-                                    newQuantity
-                                );
+                                let itemIndex = cart.findIndex(i => i.name === product.textContent);
+                                if (itemIndex !== -1) {
+                                    cart[itemIndex].quantity = newQuantity;
+                                    cart[itemIndex].amount = `Rs.${newTotal}`;
+                                    localStorage.setItem("cart", JSON.stringify(cart));
+                                    console.log("✅ Updated existing item in localStorage:", cart[itemIndex]);
+                                }
                             }
                         
                             // Recalculate whole_amount
@@ -285,10 +284,16 @@ s
 
                             message.style.color = "green";
                             message.textContent = "Item quantity updated in the cart.";
-                            setTimeout(()=>{
-                                message.textContent = ""
+                            setTimeout(()=>{ //set a time period to disappear the message after some time
+                                message.textContent = "";
                             },4000 )
+
+                           
+
+                           
                         }else {
+                            totalItarm += 1;
+                            document.getElementById("itermCount").textContent = ` (${totalItarm} items)`;
                             let row = table.insertRow(No); // Now safe to use insertRow
             
                             row.insertCell(0).innerText = No;
@@ -322,7 +327,7 @@ s
                             cart.push(item);
                             console.log(cart)
                             localStorage.setItem("cart", JSON.stringify(cart));
-                    
+                            console.log("New item added to cart:", item);
             
                             message.style.color = "green";
                             message.textContent = "The item has been successfully added to the cart.";
@@ -404,7 +409,30 @@ s
                             localStorage.removeItem("cart");
                         }
                     }
-            
+                    totalItarm -- ;
+                    if (totalItarm == 0){
+                        document.getElementById("itermCount").textContent = ""
+                    }else{
+                        document.getElementById("itermCount").textContent = ` (${totalItarm} items)`;;
+                    }
+                    var table = document.getElementById("mycartTable");
+
+                    let fixTotal = [];
+                    for (var i = 1; i < table.rows.length; i++) {
+                        let cell = table.rows[i].cells[4]; // 5th cell
+                        if (cell) {
+                            fixTotal.push(cell.innerText);
+                        } else {
+                            console.warn(`Row ${i} doesn't have 5 cells`);
+                        }
+                    }
+                    let cartTotal = 0; //deleting the item, properly fix the total
+
+                    console.log(fixTotal);
+                    fixTotal.forEach(item =>{
+                        cartTotal += Number(item.replace("Rs.",""));
+                    })
+                    document.getElementById("total").textContent = "Rs." + cartTotal;
                     // Update row numbers
                     No--;
                     updateRowNumbers();
@@ -415,6 +443,7 @@ s
             });
             
             function updateRowNumbers() {
+                
                 let index = 1;
                 document.querySelectorAll("#mycartTable tbody tr").forEach((row) => {
                     row.cells[0].textContent = index;
@@ -536,14 +565,19 @@ s
                 cartTableBody.appendChild(totalRow); // Re-add the total row
             
                 let totalPrice = 0;
-            
+                totalItarm = 0;
                 cartItems.forEach(item => {
+                    
                     if (!item.unitPrice) {
                         console.warn("Missing price for item:", item);
                         return; // Skip item if price is missing
                     }
             
                     let row = document.createElement("tr");
+
+                    totalItarm += 1;
+                    document.getElementById("itermCount").textContent = ` (${totalItarm} items)`;
+                    
             
                     row.innerHTML = `
                         <td>${item.no || ""}</td>
