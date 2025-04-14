@@ -210,6 +210,10 @@ tfoot {
 tfoot td {
     padding: 15px;
 }
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
 
 /* Contact Link */
 .contact-link {
@@ -430,6 +434,22 @@ footer {
     nav.active {
         display: flex;
     }
+    table {
+        font-size: 14px;
+        min-width: 600px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #itermCount {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -451,5 +471,27 @@ footer {
     
     .product i {
         font-size: 18px;
+    }
+    table {
+        font-size: 13px;
+        min-width: 550px; /* Enough to prevent word wrapping */
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    #itermCount {
+        font-size: 15px;
+        color: #39ff14; /* A neon green that looks good on dark background */
+    }
+
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
