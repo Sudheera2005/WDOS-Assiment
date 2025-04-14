@@ -1,13 +1,7 @@
 fetch("products.json")
     .then(response => response.json())
     .then(data => {
-        document.addEventListener("DOMContentLoaded", function () {
-            document.querySelector(".menu-icon").addEventListener("click", toggleMenu);
-        });
         
-        function toggleMenu() {
-            document.getElementById("nav-links").classList.toggle("active");
-        }
         
         console.log("Parsed JSON Data:", data);
         document.getElementById("itermCount").style.color = "#ffe600";

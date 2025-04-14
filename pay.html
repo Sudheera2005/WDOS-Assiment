@@ -25,19 +25,42 @@
 </head>
 <body>
     <header>
-        <a href="./index.html" class="logo-text" > Grotto Gaming</a>
-        <nav>
+        <span id="navigation-icon" class="menu-icon" onclick="openNav()">☰</span>
+        <a href="./index.html" class="logo-text">Grotto Gaming</a>
+    
+        <!-- Side Navigation -->
+        <div id="navigation-mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <a href="./index.html">Home</a>
             <a href="./games.html">Games</a>
             <a href="./console.html">Consoles</a>
-            <a href="./peripherals.html">Paripherals</a>
+            <a href="./peripherals.html">Peripherals</a>
             <a href="./up.html">Upcoming</a>
             <a href="./about.html">About Us</a>
             <a href="./FAQ.html">FAQ</a>
             <a href="./order.html">Order</a>
-        </nav>
-
+        </div>
     </header>
+    <script>
+       function openNav() {
+            document.getElementById("navigation-mySidenav").style.width = "250px";
+            document.getElementById("navigation-icon").style.marginLeft = "250px";
+            document.querySelector(".logo-text").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+        }
+
+        function closeNav() {
+            document.getElementById("navigation-mySidenav").style.width = "0";
+            document.getElementById("navigation-icon").style.marginLeft = "0";
+            document.querySelector(".logo-text").style.marginLeft = "0";
+            document.body.style.backgroundColor = "#0D0D0D";
+        }
+
+        // Optional: if using accordion menus later
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+    </script>
+    
     <main><br><br>
         <div id="pay_frame">
             <div>
