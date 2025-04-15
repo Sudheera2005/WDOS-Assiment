@@ -23,8 +23,31 @@ header {
     color: white;
 }
 
+/* Desktop Navigation */
+.desktop-nav {
+    display: flex;
+    gap: 20px;
+}
 
-/* Logo Styling */
+.desktop-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.desktop-nav a:hover {
+    color: #ff6600;
+}
+
+/* Mobile Navigation Icon */
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    display: none; /* Hidden by default on desktop */
+}
+
 /* Side navigation menu */
 .sidenav {
     height: 100%;
@@ -62,13 +85,12 @@ header {
     cursor: pointer;
 }
 
-/* Header Logo & Icon Styling */
+/* Logo Styling */
 .logo-text {
     font-size: 1.8rem;
     font-weight: bold;
     text-decoration: none;
     color: #fff;
-    transition: margin-left 0.4s ease;
 }
 
 .menu-icon {
@@ -511,8 +533,60 @@ footer {
   .add-to-cart-btn:hover {
     background-color: #c62828;
   }
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .quantity-selector i {
+    font-size: 24px;
+    color: #e53935;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quantity-selector i:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .quantity-selector input[type="number"] {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .quantity-selector input[type="number"]:focus {
+    border-color: #e53935;
+  }
+  
 /* Responsive Design */
 @media (max-width: 768px) {
+    .desktop-nav {
+        display: none; /* Hide desktop nav on mobile */
+    }
+    
+    .menu-icon {
+        display: block; /* Show hamburger menu on mobile */
+    }
+    
+    #ProductsFrame {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .product img {
+        height: 180px;
+    }
+
     #ProductsFrame {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
@@ -524,26 +598,6 @@ footer {
         display: block;
     }
 
-    nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 65px;
-        right: 0;
-        background-color: #2c2c2c;
-        width: 100%;
-        padding: 15px 0;
-    }
-
-    nav a {
-        padding: 10px;
-        text-align: center;
-        border-top: 1px solid #444;
-    }
-
-    nav.active {
-        display: flex;
-    }
     table {
         font-size: 14px;
         min-width: 600px;

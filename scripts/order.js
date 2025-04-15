@@ -235,7 +235,7 @@ s
 
             // Function to set up an event listener for the Cart button
             let totalItarm = 0;
-            let No = 1;
+            
             let whole_amount = 0;
             let cart = JSON.parse(localStorage.getItem("cart")) || [];;
             function setupCartButton(cartButton, input, message, product, price) {
@@ -304,9 +304,9 @@ s
                         }else {
                             totalItarm += 1;
                             document.getElementById("itermCount").textContent = ` (${totalItarm} items)`;
-                            let row = table.insertRow(No); // Now safe to use insertRow
+                            let row = table.insertRow(cart.length+1); // Now safe to use insertRow
             
-                            row.insertCell(0).innerText = No;
+                            row.insertCell(0).innerText = cart.length+1;
                             row.insertCell(1).innerText = product.textContent;
                             let unitPrice = price.textContent.replace("Price: ", "").trim()
                             row.insertCell(2).innerText = unitPrice;
@@ -328,7 +328,7 @@ s
 
                         
                             let item = {
-                                no: No,
+                                no: cart.length+1,
                                 name: product.textContent,
                                 unitPrice: price.textContent.replace("Price: ",""),
                                 quantity: input.value,
@@ -345,7 +345,7 @@ s
                                 message.textContent = ""
                             },4000 )
             
-                            No += 1;
+                          
                         
                         }
                     }                
@@ -444,7 +444,7 @@ s
                     })
                     document.getElementById("total").textContent = "Rs." + cartTotal;
                     // Update row numbers
-                    No--;
+                    
                     updateRowNumbers();
                     
                     // Optional: Show feedback to user
