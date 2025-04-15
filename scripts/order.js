@@ -46,12 +46,15 @@ fetch("products.json")
                 `;
 s
             data.forEach(item => {
+                
                 if (x < 9) {
                     outputP += `
                         <div class="product">
-                            <img class="image" src="${item.Image}" alt="${item.Name}" />
+                            <a href="/prodct.html?id=${item.id}" class="product-link">
+                                <img class="image" src="${item.Image}" alt="${item.Name}" />
+                            </a>
                             <h2 id="p${p}iterm">${item.Name}</h2>
-                            <p>${item.Details}</p>
+                            <p>${item.Description}</p>
                             <p id="p${p}price" class="price">Price: ${item.Price}</p>
                             <i id="p${p}less" class='bx bxs-left-arrow'></i>
                             <input type="number" class="quantity" id="p${p}quantity"> 
@@ -59,14 +62,17 @@ s
                             <i id="p${p}cart" class='bx bxs-cart-add'></i>
                             <p id="responseMessagep${p}"></p>
                         </div>
+                        
                     `;
                     p += 1;
                 } else if (x < 15) {
                     outputG += `
                         <div class="product">
-                            <img class="image" src="${item.Image}" alt="${item.Name}" />
+                            <a href="/prodct.html?id=${item.id}" class="product-link">
+                                <img class="image" src="${item.Image}" alt="${item.Name}" />
+                            </a>
                             <h2 id="g${g}iterm">${item.Name}</h2>
-                            <p>${item.Details}</p>
+                            <p>${item.Description}</p>
                             <p id="g${g}price">Price: ${item.Price}</p>
                             <i id="g${g}less" class='bx bxs-left-arrow'></i>
                             <input type="number" class="quantity" id="g${g}quantity">
@@ -74,14 +80,17 @@ s
                             <i id="g${g}cart" class='bx bxs-cart-add'></i>
                             <p id="responseMessageg${g}"></p>
                         </div>
+                        
                     `;
                     g += 1;
                 } else if (x < 21) {
                     outputM += `
                         <div class="product">
-                            <img class="image" src="${item.Image}" alt="${item.Name}" />
+                            <a href="/prodct.html?id=${item.id}" class="product-link">
+                                <img class="image" src="${item.Image}" alt="${item.Name}" />
+                            </a>
                             <h2 id="m${m}iterm">${item.Name}</h2>
-                            <p>${item.Details}</p>
+                            <p>${item.Description}</p>
                             <p id="m${m}price">Price: ${item.Price}</p>
                             <i id="m${m}less" class='bx bxs-left-arrow'></i>
                             <input type="number" class="quantity" id="m${m}quantity">
@@ -89,14 +98,17 @@ s
                             <i id="m${m}cart" class='bx bxs-cart-add'></i>
                             <p id="responseMessagem${m}"></p>
                         </div>
+                        
                     `;
                     m += 1;
                 } else if (x < 26) {
                     outputY += `
                         <div class="product">
-                            <img class="image" src="${item.Image}" alt="${item.Name}" />
+                            <a href="/prodct.html?id=${item.id}" class="product-link">
+                                <img class="image" src="${item.Image}" alt="${item.Name}" />
+                            </a>
                             <h2 id="y${y}iterm">${item.Name}</h2>
-                            <p>${item.Details}</p>
+                            <p>${item.Description}</p>
                             <p id="y${y}price">Price: ${item.Price}</p>
                             <i id="y${y}less" class='bx bxs-left-arrow'></i>
                             <input type="number" class="quantity" id="y${y}quantity">
@@ -104,14 +116,17 @@ s
                             <i id="y${y}cart" class='bx bxs-cart-add'></i>
                             <p id="responseMessagey${y}"></p>
                         </div>
+                        
                     `;
                     y += 1;
                 } else if (x < 32) {
                     outputS += `
                         <div class="product">
-                            <img class="image" src="${item.Image}" alt="${item.Name}" />
+                            <a href="/prodct.html?id=${item.id}" class="product-link">
+                                <img class="image" src="${item.Image}" alt="${item.Name}" />
+                            </a>
                             <h2 id="s${s}iterm">${item.Name}</h2>
-                            <p>${item.Details}</p>
+                            <p>${item.Description}</p>
                             <p id="s${s}price">Price: ${item.Price}</p>
                             <i id="s${s}less" class='bx bxs-left-arrow'></i>
                             <input type="number" class="quantity" id="s${s}quantity">
@@ -119,6 +134,7 @@ s
                             <i id="s${s}cart" class='bx bxs-cart-add'></i>
                             <p id="responseMessages${s}"></p>
                         </div>
+                        
                     `;
                     s += 1;
                 }
