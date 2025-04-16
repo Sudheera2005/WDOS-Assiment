@@ -50,7 +50,7 @@ s
                 if (x < 9) {
                     outputP += `
                         <div class="product">
-                            <a href="/prodct.html?id=${item.id}" class="product-link">
+                            <a href="/product.html?id=${item.id}" class="product-link">
                                 <img class="image" src="${item.Image}" alt="${item.Name}" />
                             </a>
                             <h2 id="p${p}iterm">${item.Name}</h2>
@@ -68,7 +68,7 @@ s
                 } else if (x < 15) {
                     outputG += `
                         <div class="product">
-                            <a href="/prodct.html?id=${item.id}" class="product-link">
+                            <a href="/product.html?id=${item.id}" class="product-link">
                                 <img class="image" src="${item.Image}" alt="${item.Name}" />
                             </a>
                             <h2 id="g${g}iterm">${item.Name}</h2>
@@ -86,7 +86,7 @@ s
                 } else if (x < 21) {
                     outputM += `
                         <div class="product">
-                            <a href="/prodct.html?id=${item.id}" class="product-link">
+                            <a href="/product.html?id=${item.id}" class="product-link">
                                 <img class="image" src="${item.Image}" alt="${item.Name}" />
                             </a>
                             <h2 id="m${m}iterm">${item.Name}</h2>
@@ -104,7 +104,7 @@ s
                 } else if (x < 26) {
                     outputY += `
                         <div class="product">
-                            <a href="/prodct.html?id=${item.id}" class="product-link">
+                            <a href="/product.html?id=${item.id}" class="product-link">
                                 <img class="image" src="${item.Image}" alt="${item.Name}" />
                             </a>
                             <h2 id="y${y}iterm">${item.Name}</h2>
@@ -122,7 +122,7 @@ s
                 } else if (x < 32) {
                     outputS += `
                         <div class="product">
-                            <a href="/prodct.html?id=${item.id}" class="product-link">
+                            <a href="/product.html?id=${item.id}" class="product-link">
                                 <img class="image" src="${item.Image}" alt="${item.Name}" />
                             </a>
                             <h2 id="s${s}iterm">${item.Name}</h2>
