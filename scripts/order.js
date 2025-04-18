@@ -176,7 +176,7 @@ s
             // print the worning
             function print(id){
                 id.style.color = "#FF3131"
-                id.textContent = "Crazy man  Zero or less than that cannot be your quantity."
+                id.textContent = "Sorry, the quantity value is invalid."
                 setTimeout(()=>{
                     id.textContent = ""
                 },4000 )
