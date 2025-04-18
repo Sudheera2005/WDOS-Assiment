@@ -526,24 +526,34 @@ s
 
             // Function to Save the Order in Local Storage
             function saveToFavorites() {
-                let cartItems = [];
+                var table = document.getElementById("mycartTable"); // Get table by ID
+                var values = [];
+                
+                for (var i = 1; i < table.rows.length; i++) { // Start from 1 to skip header
+                    values.push(table.rows[i].cells[0].innerText); // Read the first column (index 0)
+                }
+                if (values.includes("1")){
+                    let cartItems = [];
 
-                // Loop through all rows in the cart table except the total row
-                document.querySelectorAll("#mycartTable tbody tr:not(:last-child)").forEach((row, index) => {
-                    let item = {
-                        no: row.cells[0].textContent, // No.
-                        name: row.cells[1].textContent, // Product Name
-                        unitPrice: row.cells[2].textContent, // Unit Price
-                        quantity: row.cells[3].textContent, // Quantity
-                        amount: row.cells[4].textContent // Price
+                    // Loop through all rows in the cart table except the total row
+                    document.querySelectorAll("#mycartTable tbody tr:not(:last-child)").forEach((row, index) => {
+                        let item = {
+                            no: row.cells[0].textContent, // No.
+                            name: row.cells[1].textContent, // Product Name
+                            unitPrice: row.cells[2].textContent, // Unit Price
+                            quantity: row.cells[3].textContent, // Quantity
+                            amount: row.cells[4].textContent // Price
                         // actionbutton: row.cells[5].textContent
-                    };
-                    cartItems.push(item);
-                });
+                        };
+                        cartItems.push(item);
+                    });
 
-                // Save to localStorage
-                localStorage.setItem("favoriteOrder", JSON.stringify(cartItems));
-                alert("Order saved as favorite!");
+                    // Save to localStorage
+                    localStorage.setItem("favoriteOrder", JSON.stringify(cartItems));
+                    alert("Order saved as favorite!");
+                } else{
+                    alert("Sorry, the cart is empty")
+                }
             }
             // Function to Load Favorite Order
             function applyFavorites() {
