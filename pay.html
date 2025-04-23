@@ -64,15 +64,24 @@
     <main><br><br>
         <div id="pay_frame">
             <div>
+                <h2 class="h">Order Summary</h2>
+                <div id="summaryFram"></div>
+                <h3>Total =<span id="summaryTotal"></span></h3>
+            </div><br><br>
+            
+            <div>
                 <h2 class="h">Delivery information </h2>
             </div><br><br>
             <div>
                 <label class="label">Full Name</label><br>
                 <input class="input" type="text" id="input1"><br>
+                <p id="massegre1" class="errorMassegre" ></p>
                 <label class="label">Number</label><br>
                 <input class="input" type="tel" id="input2" placeholder="+94- 774321768"><br>
+                <p id="massegre2" class="errorMassegre" ></p>
                 <label class="label">Address</label><br>
                 <input class="input" type="text" id="input3"><br>
+                <p id="massegre3" class="errorMassegre" ></p>
             </div>
             <div>
                 <h2 class="e">Payment method</h2>
@@ -80,17 +89,26 @@
             <div>
                 <label class="label">Card Number</label><br>
                 <input class="input" type="number" id="input4"><br>
+                <p id="massegre4" class="errorMassegre" ></p>
                 <label class="label">Name on the Card</label><br>
                 <input class="input" type="text" id="input5"><br>
+                <p id="massegre5" class="errorMassegre" ></p>
                 <label class="label">Expiration date</label><br>
                 <input class="input" type="text" id="input6" placeholder="05">
                 <input class="input" type="text" id="input7" placeholder="29"><br>
+                <p id="massegre6" class="errorMassegre" ></p>
                 <label class="label">Code</label><br>
                 <input class="input" type="number" id="input8" placeholder="078"><br>
+                <p id="massegre7" class="errorMassegre" ></p>
             </div>
             <button id="paynow" class="pay">Pay Now</button>
-            <p id="payMessage"></p>
         </div>
+        <div id="success-message" class="message-container">
+            <img src="./Image/massage/successful.png" alt="Success Icon">
+            <h2>Thank you for your purchase</h2>
+            <p>Your order will be delivered on <b><span id="delivery-date"></span></b></p>
+        </div>
+    
         
     </main>
     <footer>

@@ -304,6 +304,7 @@ s
                         }else {
                             totalItarm += 1;
                             document.getElementById("itermCount").textContent = ` (${totalItarm} items)`;
+                            document.getElementById("itemCountButt").textContent = ` (${totalItarm} items)`;
                             let row = table.insertRow(cart.length+1); // Now safe to use insertRow
             
                             row.insertCell(0).innerText = cart.length+1;
@@ -421,9 +422,11 @@ s
                     }
                     totalItarm -- ;
                     if (totalItarm == 0){
-                        document.getElementById("itermCount").textContent = ""
+                        document.getElementById("itermCount").textContent = "";
+                        document.getElementById("itemCountButt").textContent = "";
                     }else{
-                        document.getElementById("itermCount").textContent = ` (${totalItarm} items)`;;
+                        document.getElementById("itermCount").textContent = ` (${totalItarm} items)`;
+                        document.getElementById("itemCountButt").textContent = ` (${totalItarm} items)`;
                     }
                     var table = document.getElementById("mycartTable");
 
@@ -491,6 +494,21 @@ s
                     values.push(table.rows[i].cells[0].innerText); // Read the first column (index 0)
                 }
                 if (values.includes("1")){
+                    
+                    let summaryData = []
+                    for (let i = 1; i < table.rows.length; i++) {
+                        const row = table.rows[i];
+                        if (row && row.cells.length >= 5) {
+                            const item = row.cells[1].innerText.trim();
+                            const price = row.cells[4].innerText.trim();
+                            summaryData.push({ item, price });
+                        } else {
+                            console.log(`Skipping row ${i} — not enough cells.`);
+                        }
+                    }
+                    
+                    
+                    localStorage.setItem("orderSummary", JSON.stringify(summaryData));
                     window.location.href = "./pay.html";
                 } else{
                     document.getElementById("buyMessage").style.color = "#FF3131"
@@ -498,15 +516,14 @@ s
                 }
             }
 
-            
-         
-
+            document.getElementById("empty-cart").style.display = "none";
             document.getElementById("tableAction").style.display = "none";
             document.getElementById("cart").addEventListener("click", displayCart);
 
             function displayCart() {
                 let productsFrame = document.getElementById("ProductsFrame");
                 let tableAction = document.getElementById("tableAction");
+                let emptyCart = document.getElementById("empty-cart");
 
                 if (productsFrame.style.display === "none") {
                     // Show ProductsFrame and hide cart
@@ -514,12 +531,31 @@ s
                     productsFrame.style.opacity = "1";
                     tableAction.style.display = "none";
                 } else {
+                    var table = document.getElementById("mycartTable"); // Get table by ID
+                    var values = [];
+                
+                    for (var i = 1; i < table.rows.length; i++) { // Start from 1 to skip header
+                        values.push(table.rows[i].cells[0].innerText); // Read the first column (index 0)
+                    }
+                    if (values.includes("1")){
+                        productsFrame.style.display = "none";
+                        emptyCart.style.display = "none";
+                        tableAction.style.display = "block";
+                    } else{
+                        productsFrame.style.display = "none";
+                        tableAction.style.display = "none";
+                        emptyCart.style.display = "block";
+                    }
                     // Hide ProductsFrame and show cart
-                    productsFrame.style.display = "none";
-                    tableAction.style.display = "block";
+                    
                 }
             }
 
+            document.getElementById("go-back-btn").addEventListener("click",function(){
+                document.getElementById("ProductsFrame").style.display = "block";
+                document.getElementById("empty-cart").style.display = "none";
+                document.getElementById("tableAction").style.display = "none";
+            })
             // Select the buttons
             const addToFavoritesBtn = document.getElementById("add");
             const applyFavoritesBtn = document.getElementById("apply");
@@ -597,6 +633,7 @@ s
 
                     totalItarm += 1;
                     document.getElementById("itermCount").textContent = ` (${totalItarm} items)`;
+                    document.getElementById("itemCountButt").textContent = ` (${totalItarm} items)`;
                     
             
                     row.innerHTML = `
@@ -630,6 +667,11 @@ s
             // Attach event listeners
             addToFavoritesBtn.addEventListener("click", saveToFavorites);
             applyFavoritesBtn.addEventListener("click", applyFavorites);
+            document.getElementById("apply-favorite-btn").addEventListener("click", function(){
+                applyFavorites();
+                document.getElementById("empty-cart").style.display = "none";
+                document.getElementById("tableAction").style.display = "block";
+            })
 
             
             

@@ -69,10 +69,19 @@
         // Remove the marginLeft adjustments since we don't need them anymore
     </script>
     
-    <button id="cart"><i class='bx bxs-cart-add'></i></button>
+    <button id="cart">Cart<span id="itemCountButt"></span></button>
     <main>
         <div id = "ProductsFrame"></div>
-        
+        <div id="empty-cart" class="cart-container">
+            <img src="./Image/massage/Empty cart.png" alt="Empty Cart">
+            <h2>Ooops! Your cart is empty</h2>
+            
+            <div class="cart-buttons">
+                <button id="go-back-btn" class="cart-btn">Go back to items</button>
+                <button id="apply-favorite-btn" class="cart-btn">Apply favorite</button>
+            </div>
+        </div>
+    
         <div id="tableAction">
             <h1>Your Cart<span id="itermCount"></span></h1>
             <div class="table-container">
