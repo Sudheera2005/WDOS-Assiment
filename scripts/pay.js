@@ -1,6 +1,6 @@
 // pay page 
-document.getElementById("success-message").style.display = "none";
-let data = JSON.parse(localStorage.getItem("orderSummary"));
+document.getElementById("success-message").style.display = "none"; //in the start hidd success-message
+let data = JSON.parse(localStorage.getItem("orderSummary")); //transfer the content of the cart using Jeson
 
 let outputDiv = document.getElementById("summaryFram");
 
@@ -8,7 +8,7 @@ let outputDiv = document.getElementById("summaryFram");
 if (data && data.length > 0) {
     let html = "<ul>";
     let summaryTotal = 0;
-    data.forEach(entry => {
+    data.forEach(entry => { // iterate over every element in the json and include it in the HTML file 
         html += `<li><strong>${entry.item}</strong>: ${entry.price}</li>`;
         summaryTotal += Number(entry.price.replace("Rs.",""));
     });
@@ -22,6 +22,7 @@ if (data && data.length > 0) {
 }
 
 function pay(){
+    //create the variable
     const input1 = document.getElementById("input1"); // Name
     const input2 = document.getElementById("input2"); // Mobile
     const input3 = document.getElementById("input3"); // Address
@@ -39,6 +40,8 @@ function pay(){
     const expiryMonth = input6.value.toString().trim();
     const expiryYear = input7.value.toString().trim();
     const cvv = input8.value.toString().trim();
+
+    //verify with validation rqumant
 
     if (input1.value.trim() === "") {
         document.getElementById("massegre1").textContent = "You must enter your name."
@@ -83,14 +86,14 @@ function pay(){
     }
 
     
-    if (errorCount == 0){
+    if (errorCount == 0){ //verify whether there are mistakes in validation
         document.getElementById("pay_frame").style.display = "none";
         document.getElementById("success-message").style.display = "block";
             
-        let currentDate = new Date();
+        let currentDate = new Date(); //retrieve the current day 
 
-        // Set delivery time (e.g., 3 days from now)
-        let deliveryDays = 5;
+        // Set delivery time (e.g., 7 days from now)
+        let deliveryDays = 7;
         let deliveryDate = new Date();
         deliveryDate.setDate(currentDate.getDate() + deliveryDays);
     
@@ -98,7 +101,7 @@ function pay(){
         let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         let formattedDate = deliveryDate.toLocaleDateString('en-US', options);
         
-        document.getElementById("delivery-date").textContent = formattedDate;
+        document.getElementById("delivery-date").textContent = formattedDate;//dispy it in the success-message
     }
 }
 

@@ -529,6 +529,7 @@ s
                     // Show ProductsFrame and hide cart
                     productsFrame.style.display = "grid";  // Ensure correct layout
                     productsFrame.style.opacity = "1";
+                    emptyCart.style.display = "none";
                     tableAction.style.display = "none";
                 } else {
                     var table = document.getElementById("mycartTable"); // Get table by ID
