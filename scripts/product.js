@@ -1,3 +1,4 @@
+// read the values from the Json file and get the current value from the user click
 document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const productId = params.get("id");
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 });
-
+// dispay the values in the HTML file 
 function displayProduct(product) {
     const container = document.getElementById("productDetails");
     container.innerHTML = `
@@ -60,6 +61,7 @@ function displayProduct(product) {
             qtyInput.value = currentValue;
         }
     });
+    // add item to the cart 
     document.getElementById("addcart").addEventListener("click", function(){
         let price = document.getElementById("price").textContent.replace("Price: Rs.","")
         let count = qtyInput.value;

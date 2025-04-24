@@ -291,54 +291,81 @@ h1{
     color: #0D0D0D;
 }
    
-/* table style */
-table {
+/* Table Container for Scroll on Smaller Screens */
+.table-container {
     width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #0d0d0d;
-    color: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    overflow-x: auto;
+    padding: 1rem;
 }
 
-/* Header Row */
+/* Table Styling */
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #121212;
+    color: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.95rem;
+    backdrop-filter: blur(10px);
+}
+
+/* Table Header */
 thead {
-    background-color: #1f1f1f;
+    background: linear-gradient(to right, #1f1f1f, #262626);
     color: #ff6600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 th, td {
-    padding: 12px;
+    padding: 14px 18px;
     text-align: center;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #2c2c2c;
 }
 
-/* Alternate row background */
+/* Zebra Stripe Rows */
 tbody tr:nth-child(even) {
     background-color: #1a1a1a;
 }
 
 /* Total Row */
-#t{
+#t {
     text-align: right;
     color: #28a745;
+    font-weight: 600;
 }
+
+/* Footer */
 tfoot {
-    background-color: #1f1f1f;
+    background: #1f1f1f;
     font-weight: bold;
-    color: #ffcc00;
+    color: #ffd700;
 }
 
 tfoot td {
-    padding: 15px;
+    padding: 16px;
+    font-size: 0.9rem;
 }
-.table-container {
-    width: 100%;
-    overflow-x: auto;
+
+/* Mail Link Styling */
+tfoot a {
+    color: #39ff14;
+    text-decoration: underline;
+    transition: 0.3s ease;
 }
+
+tfoot a:hover {
+    color: #66ff66;
+}
+
+
+
+
 
 /* Contact Link */
 .contact-link {
@@ -708,7 +735,7 @@ footer {
 .errorMassegre{
     color: red;
 }
-  
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .desktop-nav {
@@ -738,13 +765,13 @@ footer {
         display: block;
     }
 
-    table {
-        font-size: 14px;
-        min-width: 600px;
+    th, td {
+        font-size: 0.85rem;
+        padding: 10px;
     }
 
-    th, td {
-        padding: 8px;
+    table {
+        font-size: 0.9rem;
     }
 
     h1 {
